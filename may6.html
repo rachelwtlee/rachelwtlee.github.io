@@ -1,0 +1,547 @@
+<html>
+      
+       <head>
+        <title>HOPE BROWSER</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="js/jquery-3.4.0.min.js">
+        </script>
+        <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/may6.js"></script>
+        
+        <!--        TYPEFACES-->
+        <link href="https://fonts.googleapis.com/css?family=Gotu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+        
+        <script>
+            $(document).ready(function() {
+                 /*STORIES AND INSPIRATION*/
+                $("#nikeLink").click(function () {
+                window.open("https://www.fastcompany.com/90498707/how-nike-built-face-shields-from-shoe-parts-in-just-two-weeks");
+                });
+                
+                $("#masksLink").click(function() {
+                    window.open("https://www.instagram.com/yrurari/");
+                });
+                 
+                
+                $("#londonLink").click(function () {
+                window.open("https://www.itsnicethat.com/articles/studio-la-plage-mayor-of-london-stay-home-save-lives-illustration-animation-300420");
+                });
+                
+                $("#ACLink").click(function () {
+                window.open("https://www.newyorker.com/culture/culture-desk/finding-connection-during-quarantine-with-animal-crossing-new-horizons");
+                });
+                
+                $("#chinaLink").click(function () {
+                window.open("https://www.fastcompany.com/90499437/this-school-in-china-has-a-brilliant-solution-for-keeping-kids-six-feet-apart");
+                });
+                
+                $("#creativesLink").click(function () {
+                window.open("https://www.creativesagainstcovid19.com/");
+                });
+                
+                $("#resilienceLink").click(function () {
+                window.open("https://eyeondesign.aiga.org/my-design-career-began-during-a-recession-heres-what-i-learned/");
+                });
+                
+                $("#sustainableLink").click(function () {
+                window.open("https://thenextweb.com/syndication/2020/05/02/how-the-coronavirus-pandemic-might-make-our-cities-more-sustainable/");
+                });
+                
+                $("#flavoursLink").click(function () {
+                window.open("https://www.nytimes.com/2020/04/29/world/asia/coronavirus-thailand-restaurants-migrants.html?action=click&module=News&pgtype=Homepage");
+                });
+                
+                
+                /*STARS*/
+                $(".star").click(function() {
+                    $("#starQuote1").toggleClass("show");
+                })
+                
+                /*EVENTS*/
+                $("#sideProjectDetails").click(function () {
+                window.open("https://the-dots.com/events/tdktuesday-the-great-side-project-1544");
+                });
+                
+                $("#andyDetails").click(function () {
+                window.open("https://www.youtube.com/watch?v=kGIgIIxl6nc&feature=youtu.be");
+                });
+                
+                $("#88Details").click(function () {
+                window.open("https://www.instagram.com/p/B_lfxkhhto7/");
+                });
+                
+                $("#irisDetails").click(function () {
+                window.open("https://www.dezeen.com/vdf/schedule/");
+                });
+                
+                
+                /*THINGS TO DO*/
+                $("#PPELink").click(function () {
+                window.open("https://charity.gofundme.com/o/en/campaign/getusppe");
+                });
+                
+                $("#breadLink").click(function () {
+                window.open("https://www.nytimes.com/article/how-to-make-bread.html?action=click&module=RelatedLinks&pgtype=Article");
+                });
+                
+               $("#netflixDetails").click(function () {
+                window.open("https://www.netflixparty.com/");
+                });
+                
+                $("#moviesDetails").click(function () {
+                window.open("https://www.vulture.com/article/best-movies-on-netflix-right-now.html");
+                });
+                
+                $("#zoomLink").click(function () {
+                window.open("https://www.gotyourback.space/");
+                });
+                
+                $("#fosterLink").click(function () {
+                window.open("https://www.designboom.com/architecture/foster-partners-architecture-from-home-challenges-children-04-28-2020/");
+                });
+                
+                $("#uniteLink").click(function () {
+                window.open("https://unite.us/videos/");
+                });
+            });
+            
+        </script>
+</head>
+
+<!--NAV MENU START-->
+<section>
+    <div id="sidepagemain" class="sidepage">
+          <a href="javascript:void(0)" class="closenav" onclick="closeNav()">&times;</a>
+          
+        <span onmouseover="openNav2()">
+            <h1 onmouseover="navHome()"><a href="may6.html">Home</a></h1>
+          <h1 onmouseover="navEvents()"><a href="events.html">Events</a></h1>
+          <h1 onmouseover="navStories()"><a href="stories.html">Stories & Inspiration</a></h1>
+          <h1 onmouseover="navEntertainment()"><a href="entertainment.html">Things To Do</a></h1>
+          <h1 onmouseover="navAbout()">About</h1>
+        </span>
+    </div>
+    
+    <div id="sidepagefeature" class="sidepage2">
+        <p id="featureTitle">FEATURED TODAY</p>
+        <h2 id="feature1">IN / DEEP with Animator Andy Biddle</h2>
+        <h2 id="feature2">A Chef Finds New Flavors in a Pandemic</h2>
+        <h2 id="feature3">Build a Fantastical City (With or Without) Kids at Home</h2>
+        <p id="credits"></p>
+    </div>
+</section>
+<!--NAV MENU END-->
+
+<header>
+    <div class="header">
+          <div class="eventsHeader" id="eventsHeaderHover">
+              <a href="events.html"><h2 onmouseover="hoverEvents()" onmouseout="hoverEventsDefault()" id="eventsTitle">Events</h2></a> 
+          </div>
+
+          <div class="storiesHeader" id="storiesHeaderHover">
+              <a href="stories.html"><h2 onmouseover="hoverStories()" onmouseout="hoverStoriesDefault()" id="storiesTitle">Stories and Inspiration</h2></a>
+          </div>
+
+          <div class="entertainmentHeader" id="entertainmentHeaderHover">
+              <a href="entertainment.html"><h2 onmouseover="hoverEntertainment()" onmouseout="hoverEntertainmentDefault()" id="entertainmentTitle">Things to Do</h2></a>
+          </div>
+    </div>  
+  
+   <div class="sideNav">
+     <div class="menu">
+        <span onclick="openNav()"><img src="images/menu.svg" id="sideMenu1"></span>
+     </div>
+      <h2 style='color: #FFFFFF'>May 6</h2>
+       <h2><a href="index.html">May 7</a></h2>
+      <h2><a href="may8.html">May 8</a></h2>
+   </div>
+</header>
+   
+<body>
+   <div class="content">
+   
+<!--       EVENTS CONTENT-->
+        <div class="eventsContent">
+           <!--       TDK START-->
+           <div class="event" id="sideProject" a onmouseover="eventsHover();" onmouseout="eventsDefault();">
+                    <div class="eventImg">
+                    <img src="images/tdk.jpeg">
+                </div>
+
+                <div class="eventText">
+                    <p>may 6, 9 pm est</p>
+                    <h2>The Design Kids Presents: The Great Side Project</h2>
+                    <p>With the 7th week in lockdown on our doorsteps it's not uncommon to feel as though your creative juices are wearing thin. So this month we're focussing on an event which will relight that spark. Whether you’re looking for your next side project, or you have an idea and want to know how to get started, we’re covering all the basics. We’ll also be talking about the pressure many of us feel trying to use our time productively during isolation, how creativity has been impacted by the global shut down and how community can refresh and motivate us. </p>
+                </div> 
+                
+                <div class="eventDetails" id="sideProjectDetails">
+              <p>view event details</p>
+          </div>
+          <a href="iCal/The%20Great%20Side%20Project.ics" download><div class="downloadEvent" id="sideProjectDownload">
+              <p>download icalendar invitation</p>
+              </div></a> 
+          </div>
+<!--             TDK END-->
+           
+            <!--       ANDY START-->
+           <div class="event" id="andy" a onmouseover="eventsHover();" onmouseout="eventsDefault();">
+                    <div class="eventImg">
+                    <img src="images/andy_biddle.jpg">
+                </div>
+
+                <div class="eventText">
+                    <p>may 6, 3 pm bst</p>
+                    <h2>IN / DEEP with Animator Andy Biddle</h2>
+                    <p>Join IN / DEVELOPMENT for a conversation with <a href="https://vimeo.com/andybiddle" target="_blank">Andy Biddle</a>, who previously worked on animating <i>The Grand Budapest Hotel</i> (2014), <i>Fantastic Mr. Fox</i> (2009) and <i>Wallace and Gromit</i> (2005).</p>
+                </div> 
+                
+                <div class="eventDetails" id="andyDetails">
+              <p>livestream event</p>
+          </div>
+          <a href="iCal/Andy%20Biddle.ics" download><div class="downloadEvent" id="andyDownload">
+              <p>download icalendar invitation</p>
+              </div></a> 
+          </div>
+<!--           ANDY END-->
+            
+            <!--       IRIS START-->
+           <div class="event" id="iris" a onmouseover="eventsHover();" onmouseout="eventsDefault();">
+                    <div class="eventImg">
+                    <img src="images/iris.jpeg">
+                </div>
+
+                <div class="eventText">
+                    <p>may 6, 4 pm bst</p>
+                    <h2>Virtual Design Festival x Iris Van Herpen</h2>
+                    <p>Dezeen will premiere an exclusive series of video interviews with Dutch fashion designer Iris van Herpen as part of the VDF x Iris van Herpen collaboration during Dezeen's Virtual Design Festival.</p>
+                </div> 
+                
+                <div class="eventDetails" id="irisDetails">
+              <p>view event details</p>
+          </div>
+          <a href="iCal/Iris%20Van%20Herpen.ics" download><div class="downloadEvent" id="irisDownload">
+              <p>download icalendar invitation</p>
+              </div></a> 
+          </div>
+<!--           IRIS END-->
+             
+        <!--       88 START-->
+           <div class="event" id="88" a onmouseover="eventsHover();" onmouseout="eventsDefault();">
+                    <div class="eventImg">
+                    <img src="images/88.jpg">
+                </div>
+
+                <div class="eventText">
+                    <p>may 6, 9 pm est</p>
+                    <h2 id="88">88Rising Presents: Asia Rising Forever</h2>
+                    <p>88Rising is hosting a 4 hour livestreamed concert celebrating the most exciting Asian talent from around the world. Featuring Alextbh, Audrey Nuna, Beabadoobee, CLC, Dumbfounded, HYUKOH, Ingo Pascual, Josh Pan, Kang Daniel, Keshi, Lim Kim, Luna Li, mxmtoon, NIKI, No Vacation, Phum Viphurit, Rich Brian, Stephanie Poetri, Suboi, Umi, Yuna and 9m88. </p>
+                </div> 
+                
+                <div class="eventDetails" id="88Details">
+              <p>view event details</p>
+          </div>
+          <a href="iCal/Asia%20Rising%20Forever.ics" download><div class="downloadEvent" id="88Download">
+              <p>download icalendar invitation</p>
+              </div></a> 
+          </div>
+<!--             88 END-->
+              </div>
+
+<!--         STORIES CONTENT-->
+          <div class="storiesContent">
+          <div id="comic">
+                <img src="images/feliciachiao.jpg">
+                <figcaption>by <a href="https://www.instagram.com/feliciachiao/" target="_blank">@feliciachiao</a></figcaption>
+            </div>
+           
+<!--           NIKE-->
+           <div class="storiesHorizontal" id="nike" a onmouseover="storiesHover();" onmouseout="storiesDefault();">
+               
+                <div class="contentImg">
+                <img src="images/nike.jpg">
+            </div>
+
+            <div class="contentText">
+                <h2 id="contentTitle"><span id="nikeLink">How Nike Turned Shoe Parts Into Face Shields In Just Two Weeks</span></h2>
+                <p id="contentAuthor">by Mark Wilsom</p>
+            </div> 
+          </div>
+<!--          NIKE END-->
+                   
+          <!--       MASKS-->
+       <div class="storiesVertical" id="masks" a onmouseover="storiesHover2();" onmouseout="storiesDefault2();">
+            <div class="verticalImg">
+                <img src="images/masks.jpg">
+            </div>
+            <div class="verticalText">
+                <h2 id="contentTitleMasks"><span id="masksLink" >@yrurari Has An Uconventional Take On Face Masks</span></h2>
+            </div> 
+      </div>
+      
+<!--      MASKS END-->
+       
+        <!--       LONDON-->
+       <div class="storiesVertical" id="london" a onmouseover="storiesHover3();" onmouseout="storiesDefault3();">
+                <div class="verticalImg">
+                <img src="images/london.webp">
+            </div>
+
+            <div class="verticalText">
+                <h2 id="contentTitleLondon"><span id="londonLink">A Design Brief From the Mayor of London During a Pandemic</span></h2>
+                <p id="contentAuthorLondon">by Lucy Bourton</p>
+            </div> 
+      </div>
+<!--          LONDON END-->
+          <div class="clear"></div>
+          
+          <!--           AC END-->
+           <div class="storiesHorizontal" id="AC" a onmouseover="storiesHover4();" onmouseout="storiesDefault4();">
+               
+                <div class="contentImg">
+                <img src="images/ac.jpg">
+            </div>
+
+            <div class="contentText">
+                <h2 id="contentTitleAC"><span id="ACLink">Finding Connections During Quarantine with Animal Crossing</span></h2>
+                <p id="contentAuthorAC">by Simon Parkin</p>
+            </div> 
+          </div>
+<!--          AC END-->
+         
+         <div class="clear"></div>
+          
+          <!--       CHINA-->
+       <div class="storiesVertical" id="china" a onmouseover="storiesHover5();" onmouseout="storiesDefault5();">
+                <div class="verticalImg">
+                <img src="images/china.jpg">
+            </div>
+            <div class="verticalText">
+                <h2 id="contentTitleChina"><span id="aigaLink">A Chinese School's Solution for Keeping Kids 6 Feet Apart</span></h2>
+                <p id="contentAuthorChina">by Lilly Smith</p>
+            </div> 
+      </div>
+<!--          CHINA END-->
+          
+          <!--       CREATIVES-->
+       <div class="storiesVertical" id="creatives" a onmouseover="storiesHover6();" onmouseout="storiesDefault6();">
+                <div class="verticalImg">
+                <img src="images/creatives.jpg">
+            </div>
+            <div class="verticalText">
+                <h2 id="contentTitleCreatives"><span id="creativesLink">Creatives Are Uniting to Protect Vulnerable Women and Children Impacted by Self Isolation</span></h2>
+            </div> 
+      </div>
+<!--          CREATIVES END-->
+          
+         <div class="clear"></div>
+          
+          <!--           RESILIENCE-->
+           <div class="storiesHorizontal" id="resilience" a onmouseover="storiesHover7();" onmouseout="storiesDefault7();">
+               
+                <div class="contentImg">
+                <img src="images/resilience.png">
+            </div>
+
+            <div class="contentText">
+                <h2 id="contentTitleResilience"><span id="resilienceLink">Reaching for Resilience in the Time of Covid-19</span></h2>
+                <p id="contentAuthorResilience">by Brian LaRossa</p>
+            </div> 
+            
+            <!--      STAR 1-->
+      <div class="star" id="star1"><img src="Images/star.svg" class="rotate"></div>
+          </div>
+<!--          RESILIENCE END-->
+        
+        <div class="clear"></div>
+         
+         <!--          STAR QUOTE 1-->
+          <div class="starQuotes" id="starQuote1">
+             <h2>
+                 “On my birthday last weekend, my fiancé led me to his laptop, and suddenly I heard screams of “Surprise!” My friends had organized a Zoom party without me finding out—a major coup on their part. Beneath the surprise, though, lay a familiar virus-induced sadness: I didn’t realize how much I’d miss hugging these people I love.
+              </h2> 
+              <h2>
+                 Right before everyone sang happy birthday, my doorbell rang: the chocolate bundt cake Mom had mailed arrived right on time. I blew out the candles and looked at the screen full of people clapping, laughing, and blowing kisses. At the top left corner was my mother, smiling into her camera, looking over me.”
+             </h2>
+              <p>- Phillip Picardi via <i><a href="https://www.bonappetit.com/story/call-your-mom" target="_blank">It Took a Global Pandemic, but I’m Finally Calling My Mom</a></i></p>
+              
+          </div>
+          
+          <div class="clear"></div>
+          
+          <!--      SUSTAINABLE-->
+       <div class="storiesVertical" id="sustainable" a onmouseover="storiesHover8();" onmouseout="storiesDefault8();">
+                <div class="verticalImg">
+                <img src="images/sustainable.png">
+            </div>
+            <div class="verticalText">
+                <h2 id="contentTitleSustainable"><span id="sustainableLink">How Coronavirus Might Make Our Cities More Sustainable</span></h2>
+                <p id="contentAuthorSustainable">by The Conversation</p>
+            </div> 
+      </div>
+<!--          SUSTAINABLE END-->
+          
+          <!--       FLAVOURS-->
+       <div class="storiesVertical" id="flavours" a onmouseover="storiesHover9();" onmouseout="storiesDefault9();">
+                <div class="verticalImg">
+                <img src="images/flavours.jpg">
+            </div>
+            <div class="verticalText">
+                <h2 id="contentTitleFlavours"><span id="flavoursLink">A Chef Finds New Flavors in a Pandemic</span></h2>
+                <p id="contentAuthorFlavours">by Hannah Beech</p>
+            </div> 
+      </div>
+<!--          FLAVOURS END-->
+           
+       </div>
+
+<!--         ENTERTAINMENT CONTENT-->
+          <div class="entertainmentContent">
+        <!--           PPE-->
+           <div class="entertainmentHorizontal" id="PPE" a onmouseover="entertainmentHover();" onmouseout="entertainmentDefault();">
+                <div class="contentImg">
+                <img src="images/ppe.webp">
+            </div>
+            <div class="contentText">
+                <h2 id="contentTitlePPE"><span id="PPELink">Get Our Protectors Personal Protective Equiptment</span></h2>
+            </div> 
+          </div>
+<!--         PPE END-->
+        
+        <!--           BREAD-->
+          <div class="entertainmentHorizontal" id="bread" a onmouseover="entertainmentHover2();" onmouseout="entertainmentDefault2();">
+                <div class="contentImg">
+                <img src="images/bread.jpg">
+            </div>
+            <div class="contentText">
+                <h2 id="contentTitleBread"><span id="breadLink">Learn to Make Bread at Any Skill Level</span></h2>
+            </div> 
+          </div>
+<!--               BREAD END-->
+      
+           
+<!--         NETFLIX PARTY-->
+        <div class="event" id="netflix" a onmouseover="eventsHover();" onmouseout="eventsDefault();">
+            <div class="eventImg">
+                <img src="images/roma.jpg">
+            </div>
+             <div class="entertainmentText">
+                <h2 id="">Movies to Watch During Your Next Netflix Party:</h2>
+                <ul>
+                    <li><p>Back to the Future trilogy</p></li>
+                    <li><p>Hugo</p></li>
+                    <li><p>Inception</p></li>
+                    <li><p>Incredibles 2</p></li>
+                    <li><p>Marriage Story</p></li>
+                    <li><p>Moonlight</p></li>
+                    <li><p>Roma</p></li>
+                    <li><p>Snowpiercer</p></li>
+                    <li><p>Spiderman: Into the Spider-Verse</p></li>      
+                </ul>
+            </div> 
+            
+            <div class="eventDetails" id="netflixDetails">
+              <p>install netflix party</p>
+          </div>
+          <div class="eventDetails" id="moviesDetails">
+              <p>see full movie recommendation list</p>
+          </div> 
+        </div>
+<!--        NETFLIX END-->
+       
+        <div class="clear"></div>
+              
+        <!--        ZOOM-->  
+      <div class="entertainmentHorizontal" id="zoom" a onmouseover="entertainmentHover3();" onmouseout="entertainmentDefault3();">
+                <div class="contentImg">
+                <img src="images/GotYourBack_JunglaN1_ByCarnovsky.jpg">
+            </div>
+            <div class="contentText">
+                <h2 id="contentTitleZoom"><span id="zoomLink">Change Your Video Conferencing Backdrop</span></h2>
+            </div> 
+          </div> 
+<!--       ZOOM END-->
+
+  
+         <!--          THINGS TO DO RIGHT NOW-->
+       <div class="checklist">
+                <div class="entertainmentText">
+                    <h2>Bored? Here Are Some Things You Can Do Right Now:</h2>
+                    
+                    <label class="container"><h3>Go out for a walk around the block without your phone</h3>
+                      <input type="checkbox"> 
+                      <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><h3>Read a chapter in a book</h3>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><h3>Send a nice message to someone who has helped you recently</h3>
+                     
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><h3>Learn to say <a href="https://www.englishcentres.co.uk/blog/learn-to-say-hello-in-50-languages" target="_blank">hello</a> in a foreign language</h3>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><h3>Listen to a  <a href="https://www.esquire.com/uk/latest-news/a26086091/best-podcasts/">podcast</a></h3>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    
+                    <label class="container"><h3>Declutter your workspace and living area</h3>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                </div> 
+            <div class="clear"></div>
+            <div class="shareContainer">
+                <div id="shareDescription"><p>share activities with a friend:</p></div>
+                <div id="shareName"><input type="text" placeholder="NAME"></div>
+                <div id="shareEmail"><input type="text" placeholder="EMAIL ADDRESS"></div>
+                <div id="shareSend" onclick="sent()"><p>Send</p></div>
+            </div>
+          </div>
+<!--          THINGS TO DO END-->
+                   
+        <div class="clear"></div>
+        
+        <!--        FOSTER-->  
+      <div class="entertainmentHorizontal" id="foster" a onmouseover="entertainmentHover4();" onmouseout="entertainmentDefault4();">
+                <div class="contentImg">
+                <img src="images/foster.webp">
+            </div>
+            <div class="contentText">
+                <h2 id="contentTitleFoster"><span id="fosterLink">Build a Fantastical City With (or Without) Kids at Home</span></h2>
+            </div> 
+          </div> 
+<!--       FOSTER END-->
+  
+  <div class="clear"></div>
+        
+        <!--        UNITE-->  
+      <div class="entertainmentHorizontal" id="unite" a onmouseover="entertainmentHover5();" onmouseout="entertainmentDefault5();">
+                <div class="contentImg">
+                <img src="images/unite.jpg">
+            </div>
+            <div class="contentText">
+                <h2 id="contentTitleUnite"><span id="uniteLink">Revisit Last Week's 'Call to Unite' Online Conference</span></h2>
+            </div> 
+          </div> 
+<!--       UNITE END--> 
+    </div>
+    </div>
+
+</body>
+
+</html>
