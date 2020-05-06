@@ -29,7 +29,7 @@ h3 {
     line-height: 1.5em;
 }
 
-h3, p {
+h3, h3 a, p, figcaption a {
     color: #444;
 }
 
@@ -91,7 +91,7 @@ ul li {
     line-height: 1em;
     transform: rotate(270deg);
     position: absolute;
-    left: 0.75em;
+    left: 20%;
     color: #FFD1C3;
 }
 
