@@ -129,7 +129,7 @@ ul li {
 /*SLIDING NAV MENU*/
 #sidepagemain {
   height: 100%;
-  width: 43.25%; 
+  width: 45vw; 
   position: fixed;
   z-index: 4; 
   top: 0;
@@ -186,7 +186,7 @@ ul li {
 
 #sidepagefeature {
   height: 100%;
-  width: 43.25%; 
+  width: 45vw; 
   position: fixed;
   z-index: 3; 
   top: 0;
