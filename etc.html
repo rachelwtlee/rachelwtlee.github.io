@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Etc.</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Design and HCI student @ Carnegie Mellon University">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <!-- Links to external libraries and CSS reset -->
+        <script type="text/javascript" src="js/packery.pkgd.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+
+    <header>
+        <div class="headerGrid">
+          <div class="intro">
+            <h2><a href="index.html" class="colorChange">Rachel Lee</a></span></h2><h3 id="funFact"></h3>
+          </div>
+          <div class="menuItems" id="work"><h3><a href="index.html" class="colorChange">Work</a></h3></div>
+          <div class="menuItems" id="etc"><h3><a href="etc.html" class="colorChange">Etc</a></h3></div>
+          <div class="menuItems" id="about"><h3><a href="about.html" class="colorChange">About</a></h3></div>
+        </div>
+    </header>
+
+    <body onload="fact();">
+        <main class="leftContainer">
+<!--            PAGE NAV-->
+            <div class="leftContent paragraphBottom">
+                <h3>Other Things Occupying My Time</h3>
+                <h4>Punch needle</h4>
+                <h4>Jigsaw puzzles</h4>
+                <h4>Baking pandan bread</h4>
+                <h4>Pilates workouts</h4>
+                <h4>Walks by the harbour</h4>
+            </div>
+            <div id="leftFooter">
+                <h4>Rachel Lee © 2020</h4>
+            </div>
+        </main>
+
+<!--        RIGHT CONTAINER -->
+        <main class="rightContainer">
+          <div id="intro">
+              <h1>I’m always looking for new ways to expand my skillset, satisfy my curiousities and try new things. Recently, I have taken interest in calligraphy <span class="inlineImg2"><img src="images/etc/plums.jpg"></span>, looking for letterforms in the built environment
+              <span class="inlineImg2"><img src="images/etc/metaType3.jpg"></span>, and creating tools for hope <span class="inlineImg2"><img src="images/etc/hopeWeb.png"></span>.</h1>
+          </div>
+          <section class="featureProject">
+            <div class="stickyHeader">
+                <h4 id="featureNumber">01</h4><h3>Hope Browser</h3>
+            </div>
+            <section class="featureContent">
+              <p class="projectText paragraphBottom">With the deluge of negative media surrounding COVID-19 appearing on our social feeds, it is easy to feel despondent, uninspired and weary. Hope Browser is an interactive web project aims to deliver 'bright spots' to you every day.
+              This site is a space where we celebrate community resilience, flexibility, and creativity, and above all, prove that there is a lot to be hopeful for.</p>
+              <div class="video"><iframe src="https://player.vimeo.com/video/448713155" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script></div>
+            </section>
+          </section>
+
+          <section class="featureProject">
+            <div class="stickyHeader">
+                <h4 id="featureNumber">02</h4><h3>Performance Type</h3>
+            </div>
+            <section class="featureContent">
+              <p class="projectText">A print specimen of found type that celebrates the whimsical and theatrical quality of dynamic letterforms.</p>
+              <div class="js-packery" data-packery-options='{ "itemSelector": ".gridItem", "gutter": 10 }'>
+                <div class="gridItem w2"><img src="images/etc/metaType1.jpg"></div>
+                <div class="gridItem"><img src="images/etc/metaType5.jpg"></div>
+                <div class="gridItem"><img src="images/etc/metaType3.jpg"></div>
+                <div class="gridItem w4"><img src="images/etc/metaType4.jpg"></div>
+                <div class="gridItem w4"><img src="images/etc/metaType2.jpg"></div>
+             </div>
+            </section>
+          </section>
+
+          <section class="featureProject">
+            <div class="stickyHeader">
+                <h4 id="featureNumber">03</h4><h3>Calligraphy</h3>
+            </div>
+            <section class="featureContent">
+              <p class="projectText">Recently I have been practicing more calligraphy and transcribing delightful words.</p>
+                <div class="js-packery" data-packery-options='{ "itemSelector": ".gridItem", "gutter": 10 }'>
+                  <div class="gridItem w4"><img src="images/etc/plums.jpg"></div>
+                  <div class="gridItem"><img src="images/etc/Jabberwocky5.jpg"></div>
+                  <div class="gridItem w4"><img src="images/etc/countryMouse.jpg"></div>
+                  <div class="gridItem w4"><img src="images/etc/lateAir.jpg"></div>
+               </div>
+            </section>
+          </section>
+
+          <section class="featureProject">
+            <div class="stickyHeader">
+                <h4 id="featureNumber">04</h4><h3>Creative Computing</h3>
+            </div>
+            <section class="featureContent">
+              <p class="projectText">A small collection of interactive experiments coded using p5.js, a Javascript library.</p>
+              <div class="js-packery" data-packery-options='{ "itemSelector": ".gridItem", "gutter": 10 }'>
+                <div class="gridItem w4"><img src="images/etc/Cheerio.gif"></div>
+                <div class="gridItem w4"><img src="images/etc/Spirograph.gif"></div>
+                <div class="gridItem w4"><img src="images/etc/Clock.gif"></div>
+                <div class="gridItem w4"><img src="images/etc/Astroid.gif"></div>
+             </div>
+            </section>
+          </section>
+    </main>
+  </body>
+</html>

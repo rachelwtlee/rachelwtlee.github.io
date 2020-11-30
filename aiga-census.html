@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>AIGA Census</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Design and HCI student @ Carnegie Mellon University">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <!-- Links to external libraries and CSS reset -->
+        <script type="text/javascript" src="js/packery.pkgd.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+
+    <header>
+        <div class="headerGrid">
+          <div class="intro">
+            <h2><a href="index.html" class="colorChange">Rachel Lee</a></span></h2><h3 id="funFact"></h3>
+          </div>
+          <div class="menuItems" id="work"><h3><a href="index.html" class="colorChange">Work</a></h3></div>
+          <div class="menuItems" id="etc"><h3><a href="etc.html" class="colorChange">Etc</a></h3></div>
+          <div class="menuItems" id="about"><h3><a href="about.html" class="colorChange">About</a></h3></div>
+        </div>
+    </header>
+
+    <body onload="fact();">
+        <main class="leftContainer">
+<!--            PAGE NAV-->
+            <div class="leftContent">
+              <h4 id="featureNumber">01</h4><h3 class="paragraphBottom" >AIGA Design Census</h3>
+              <h2>An interactive library of census stories visualizing the most critical issues facing design today.</h2>
+            </div>
+            <!-- superscript -->
+            <div class="leftContent leftImg" id="superContent1">
+              <img class="paragraphBottom" src="images/aiga/raw_data.png">
+              <h3>1</h3><h4>We were immedietely drawn to this subset of data because the language and worlds these stories depicted moved us in a way that numbers could not. Also, we love words.</h4>
+            </div>
+
+            <div class="leftContent leftImg" id="superContent2">
+              <h3>2</h3><h4>We were deeply inspired by our childhood experiences playing the 'Wikipedia game'. By clicking on links to portal yourself from one topic to another,
+              we aimed to create an engaging experience that allows users to choose their own narrative journey.</h4>
+            </div>
+
+            <div id="leftFooter">
+                <h4>Rachel Lee © 2020</h4>
+            </div>
+        </main>
+
+<!--        RIGHT CONTAINER -->
+        <main class="rightContainer">
+          <div class="projectCoverImg"><img src="images/home/AIGA-Web.png"></div>
+          <section class="projectIntroGrid">
+            <h5 id="title">AIGA Design Census</h5>
+            <div id="skills">
+              <h3>Skills<h3>
+              <p>Data Visualization</p>
+              <p>Print</p>
+              <p>Web</p>
+              <p>HTML / CSS / js</p>
+              <p>Interaction Design</p>
+            </div>
+            <div id="timeframe">
+              <h3>Timeframe<h3>
+              <p>Spring 2020</p>
+              <p>5 weeks</p>
+            </div>
+            <div id="collaborators">
+              <h3>Collaborators<h3>
+              <p>Jaclyn Saik</p>
+              <p>Alice Fang</p>
+            </div>
+            <div id="role">
+              <h3>Role<h3>
+              <p>Concept Development</p>
+              <p>Interaction Design</p>
+              <p>Web Development</p>
+            </div>
+            <h1 id="summary">An interactive library of census stories visualizing the most critical issues facing design today.</h1>
+            <div id="overview">
+              <p class="paragraphBottom">Every few years, AIGA releases a <a href="https://designcensus.org/" target="_blank"><span class="colorChange" span style="font-family: 'Vulf Sans', sans-serif;">census report ↗</span></a>
+              that highlights the state of design and those involved in the industry, using metrics such as demographics, job satisfaction, and future outlook of the industry.</p><p>My team decided to focus on the only subset of the
+              census with a free response option, <span class="inlineSuperscript colorChange" id="super">“What are the most critical issues facing design?” </span><span class="superscript"
+              id="superSmall">1</span> to tell the personal stories of designers through language and sentiment.</p>
+            </div>
+          </section>
+          <section class="projectContent">
+            <h5 class="projectHeading">Exploratory Site</h5>
+            <p class="projectText">Visit the <a href="https://rachelwtlee.github.io/aiga/" target="_blank"><span class="colorChange" span style="font-family: 'Vulf Sans', sans-serif;">live website ↗</span></a></p>
+            <div class="video"><iframe src="https://player.vimeo.com/video/408724932?portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script></div>
+            <!-- Exploratory Website Content -->
+            <h1 class="deliverablesHeading1">Browse Quotes</h1>
+            <div class="deliverablesImg1"><img src="images/aiga/Browse-Quotes.gif"></img></div>
+            <p class="deliverablesText1">Users are able to preview quotes through the left sidebar to get an overview of key thoughts within the dataset at a glance.</p>
+
+            <h1 class="deliverablesHeading2">Highlight Surf</h1>
+            <div class="deliverablesImg2"><img src="images/aiga/Highlight%20Surf.gif"></img></div>
+            <p class="deliverablesText2">Clicking on highlighted texts directs users down the list of quotes for the given category, all of which are connected thematically.
+              The highlights reveal the quote's categorization and placement within the curated selection. Inverted highlighted text highlights tangential categories the
+              quote also touches upon, and clicking on the highlight allows users to navigate to the corresponding category.</p>
+
+            <h1 class="deliverablesHeading3">External Links</h1>
+            <div class="deliverablesImg3"><img src="images/aiga/External-Links.gif"></img></div>
+            <p class="deliverablesText3">Embedded witin select quotes are external links to relevant articles from <a href="https://eyeondesign.aiga.org/" target="_blank">
+              <span class="colorChange" span style="font-family: 'Vulf Sans', sans-serif;">AIGA Eye on Design ↗</span></a> to further discourse about a theme
+              pertinent to the current state of design.</p>
+
+            <h1 class="deliverablesHeading4">Spot Words</h1>
+            <div class="deliverablesImg4"><img src="images/aiga/Spot-Words.gif"></img></div>
+            <p class="deliverablesText4">Hovering over a bolded spot word provides context into key themes identified across all six of our libraries, providing
+              opportunities for comparison between issues that the design industry is not heavily considering and paying close attention to.</p>
+
+            <!-- The Book -->
+            <h5 class="projectHeading">The Book</h5>
+            <p class="projectText">We printed and bound a 120 page book. With identical content as the site, rather than linking to external content, we kept all
+              ‘portals’ within the book via sticky notes. Each sticky contains a reference to a related quote in a different category. </p>
+
+            <div class="js-packery" data-packery-options='{ "itemSelector": ".gridItem", "gutter": 10 }'>
+              <div class="gridItem"><img src="images/aiga/blue.jpg"></div>
+              <div class="gridItem w2"><img src="images/aiga/yellow.jpg"></div>
+              <div class="gridItem"><img src="images/aiga/green.jpg"></div>
+              <div class="gridItem w3"><img src="images/aiga/flip.gif"></div>
+           </div>
+           <!-- Parsing Data -->
+            <h5 class="projectHeading">Parsing Data</h5>
+            <p class="projectText">Using Python and NLTK to parse through census data, we identified the 150 bi-grams and tri-grams that appear most
+              frequently in the dataset. We sorted the words and phrases into 6 core categories: quality, representation, power, change, community and education.</p>
+            <div class="carousel"
+              data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true}'>
+              <div class="carousel-cell">
+                <img src="images/aiga/sorting-categories.png" alt="Sorting bi-grams and tri-grams into categories">
+                <figcaption class="carousel-caption">Sorting bi-grams and tri-grams into themed categories.</figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/dictionary.png" alt="Creating dictionaries to parse through the data set">
+                <figcaption class="carousel-caption">Dictionaries created to help parse through the data set.</figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/nltk.png" alt="Identifying quotes using keywords">
+                <figcaption class="carousel-caption">Identifying quotes within the data set that mention key themes.</figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/spreadsheet-categorized.png" alt="Sorted dictionaries of quotes">
+                <figcaption class="carousel-caption">Libraries of sorted quotes based on dictionaries.</figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/power-spreadsheet.png" alt="Connecting the narrative">
+                <figcaption class="carousel-caption">Sifting through the sorted data to create a connecting narrative with quotes.</figcaption>
+              </div>
+            </div>
+
+            <!-- User Flow and Prototypes -->
+            <h5 class="projectHeading">User Flow and Prototypes</h5>
+            <p class="projectText paragraphBottom">We went through numerous various site and book iterations, thinking about how quotes should be linked,
+            how content should be stylized, and how we could provide an <span class="inlineSuperscript colorChange" id="super2">introspective experience
+            for users to consider their own position in the matter.</span><span class="superscript"
+            id="superSmall">2</span></p>
+
+            <div class="imgFull"><img src="images/aiga/site_map.png"></div>
+            <div class="carousel"
+              data-flickity='{ "freeScroll": true, "wrapAround": true, "autoPlay": true}'>
+              <div class="carousel-cell">
+                <img src="images/aiga/Draft%201.png" alt="Digital Explorations 1"><figcaption></figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/Draft%202.png" alt="Digital Explorations 2"><figcaption></figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/Draft%203.png" alt="Digital Explorations 3"><figcaption></figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/Draft%204.png" alt="Digital Explorations 4"><figcaption></figcaption>
+              </div>
+              <div class="carousel-cell">
+                <img src="images/aiga/Draft%205.png" alt="Digital Explorations 5"><figcaption></figcaption>
+              </div>
+            </div>
+
+          <!-- Visual Identity -->
+          <h5 class="projectHeading">Visual Identity</h5>
+          <p class="projectText paragraphBottom">Our visual system pays homage to our language based data visualization by placing strong emphasis on
+            typography and color. Our visual identity features modern elements inspired by the practice of reading and highlighting printed text.</p>
+          <div class="imgFull"><img src="images/aiga/Type.png"><figcaption>Type treatment</figcaption></div>
+          <div class="imgFull"><img src="images/aiga/Color.png"><figcaption>Color and visual system</figcaption></div>
+
+          <!-- Final Thoughts -->
+          <h5 class="projectHeading">Final Thoughts</h5>
+          <p class="projectText paragraphBottom">This project marked a lot of major milestones for me: my first data visualization project, my most
+            ambitious web project to date, my first time working with these two amazing collaborators. Through this process, we were able to challenge
+            ourselves to look into the affordances of different mediums, be ambitious with our craft, learn plenty about parsing data and create compelling
+            narratives to tell untold stories.</p>
+          <p class="projectText">In the future, I would like to explore ways in which the user’s personal narratives can be weaved into our database, be it
+            through allowing users to bookmark selections, annotate, or replying to tangents, to transform our dataset into something continuous and in flux.</p>
+      </section>
+    </main>
+  </body>
+</html>
