@@ -119,6 +119,10 @@ a:hover {
   padding-bottom: 3em;
 }
 
+.sectionTop {
+  padding-top: 1.5em;
+}
+
 .leftContent.hide {
     display: none;
 }
