@@ -10,9 +10,9 @@ $(document).ready(function() {
       gutter: 50
     });
 
-    var $grid = $('.js-packery').packery({});
-    $grid.imagesLoaded().progress( function() {
-      $grid.packery();
+    var $js-packery = $('.js-packery').packery({});
+    $js-packery.imagesLoaded().progress( function() {
+      $js-packery.packery();
     });
 
     $(".inlineImg").hover(function() {
