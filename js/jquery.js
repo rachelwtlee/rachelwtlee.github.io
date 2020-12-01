@@ -1,20 +1,4 @@
 $(document).ready(function() {
-    //INITIALIZING FLICKITY AND PACKERY
-    var $carousel = $('.carousel').flickity()
-    .flickity('next')
-    .flickity( 'select', 5 );
-    });
-
-    $(".js-packery").packery({
-      itemSelector: 'gridItem',
-      gutter: 50
-    });
-
-    var $grid = $('.js-packery').packery({});
-    $grid.imagesLoaded().progress( function() {
-      $grid.packery();
-    });
-
     $(".inlineImg").hover(function() {
         $("#rachelImg").toggleClass("show");
         $(".leftContent").toggleClass("hide");
@@ -33,7 +17,7 @@ $(document).ready(function() {
     //IMAGE ZOOM ON HOVER
     $(".imgOver").hover(function() {
         $(".over").toggleClass("zoom");
-    });
+    })
 
     $(".imgOver2").hover(function() {
         $(".over2").toggleClass("zoom");
