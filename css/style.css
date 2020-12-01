@@ -242,20 +242,20 @@ a:hover {
   grid-row: 3;
 }
 
-/* #imgOver {
+.imgOver, .imgOver2, .imgOver3 {
   overflow: hidden;
-} */
-/*
-#over {
+}
+
+.over, .over2, .over3 {
   transform: scale(1);
   transition: transform 0.25s;
 }
 
-#over.zoom {
+.over.zoom, .over2.zoom, .over3.zoom {
   transform: scale(1.15);
   transition: transform 0.25s;
   overflow: hidden;
-} */
+}
 
 .leftImg img, .featureImg1 img, .featureImg2 img, .featureImg3 img, .deliverablesImg1 img,
 .deliverablesImg2 img, .deliverablesImg3 img, .deliverablesImg4 img, .js-packery img,
@@ -369,7 +369,7 @@ iframe {
 
 .carousel-cell {
   width: 66%;
-  padding-right: 1em;
+  padding-right: 0.75em;
   counter-increment: gallery-cell;
 }
 

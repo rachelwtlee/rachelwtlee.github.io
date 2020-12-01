@@ -5,8 +5,8 @@ $(document).ready(function() {
     })
 
     $("#super").hover(function() {
-        $(".leftContent").toggleClass("hide");
         $("#superContent1").toggleClass("show");
+        $(".leftContent").toggleClass("hide");
     })
 
     $("#super2").hover(function() {
@@ -15,10 +15,18 @@ $(document).ready(function() {
     })
 
     //IMAGE ZOOM ON HOVER
-    // $("#imgOver").hover(function() {
-    //     $("#over").toggleClass("zoom");
-    // })
+    $(".imgOver").hover(function() {
+        $(".over").toggleClass("zoom");
+    })
 
+    $(".imgOver2").hover(function() {
+        $(".over2").toggleClass("zoom");
+    })
+
+    $(".imgOver3").hover(function() {
+        $(".over3").toggleClass("zoom");
+    })
+    
     // RANDOM HOVER COLOR
     var colorArray = ["#F5550E", "#80CF91", "#2AAEF9", "#FFCCF0"];
     $(".colorChange").hover(function() {
