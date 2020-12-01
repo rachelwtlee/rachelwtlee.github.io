@@ -7,7 +7,6 @@ function fact() {
 
 // var elem = document.querySelector('.js-packery');
 // var pckry = new Packery( elem, {
-//   // options
 //   itemSelector: '.gridItem',
 //   gutter: 10
 // });
