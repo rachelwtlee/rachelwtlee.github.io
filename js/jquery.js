@@ -77,5 +77,5 @@ $(document).ready(function() {
 
     $('.js-packery').packery({
       itemSelector: 'gridItem',
-      gutter: 20
+      gutter: 40
     });
