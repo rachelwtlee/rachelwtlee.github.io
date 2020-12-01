@@ -1,30 +1,88 @@
-function fact() {
-    var easterEgg = ["is a lover of eggs", "is a designer in training", "designs for community", "values sincerity",
-    "is an introvert", "is a storyteller", "loves the color yellow", "believes in empathy"];
-    var randomFact = easterEgg[Math.floor(Math.random()*easterEgg.length)];
-    document.getElementById("funFact").textContent = randomFact;
-}
+$(document).ready(function() {
+    $(".inlineImg").hover(function() {
+        $("#rachelImg").toggleClass("show");
+        $(".leftContent").toggleClass("hide");
+    })
 
-function zeroHover() {
-    document.getElementById("zero").style.cursor = "pointer";
-}
+    $("#super").hover(function() {
+        $("#superContent1").toggleClass("show");
+        $(".leftContent").toggleClass("hide");
+    })
 
-function zeroDefault() {
-    document.getElementById("zero").style.cursor = "";
-}
+    $("#super2").hover(function() {
+        $("#superContent2").toggleClass("show");
+        $(".leftContent").toggleClass("hide");
+    })
 
-function linkedinHover() {
-    document.getElementById("linkedin").style.cursor = "pointer";
-}
+    //IMAGE ZOOM ON HOVER
+    $(".imgOver").hover(function() {
+        $(".over").toggleClass("zoom");
+    })
 
-function linkedinDefault() {
-    document.getElementById("linkedin").style.cursor = "";
-}
+    $(".imgOver2").hover(function() {
+        $(".over2").toggleClass("zoom");
+    })
 
-function fbHover() {
-    document.getElementById("fb").style.cursor = "pointer";
-}
+    $(".imgOver3").hover(function() {
+        $(".over3").toggleClass("zoom");
+    })
 
-function fbDefault() {
-    document.getElementById("fb").style.cursor = "";
-}
+    // RANDOM HOVER COLOR
+    var colorArray = ["#F5550E", "#80CF91", "#2AAEF9", "#FFCCF0"];
+    $(".colorChange").hover(function() {
+      var colorPick = colorArray[Math.floor(Math.random()*colorArray.length)];
+      $(this).css("color", colorPick);
+      $(".colorChange").css("cursor","pointer");
+      }, function() {
+      $(".colorChange").css("color", "");
+      $(".colorChange").css("cursor", "");
+    });
+
+    //PAGES
+    $("#aiga").click(function () {
+        window.location.replace("aiga-census.html")
+    })
+
+    $("#aiga").hover(function () {
+        $("#aiga").css("cursor","pointer");
+        }, function() {
+        $("#aiga").css("cursor","");
+    })
+
+    $("#em").click(function () {
+        window.location.replace("em.html")
+    })
+
+    $("#em").hover(function () {
+        $("#em").css("cursor","pointer");
+        }, function() {
+        $("#em").css("cursor","");
+    })
+
+    $("#lg").click(function () {
+        window.location.replace("lg.html")
+    })
+
+    $("#lg").hover(function () {
+        $("#lg").css("cursor","pointer");
+        }, function() {
+        $("#lg").css("cursor","");
+    })
+
+    //INITIALIZING FLICKITY AND PACKERY
+    var $carousel = $('.carousel').flickity()
+    .flickity('next')
+    .flickity( 'select', 5 );
+    });
+
+    $('.js-packery').packery({
+      itemSelector: 'gridItem',
+      gutter: 20
+    });
+
+    function fact() {
+        var easterEgg = ["is a lover of eggs", "is a designer in training", "designs for community", "values sincerity",
+        "is an introvert", "is a storyteller", "loves the color yellow", "believes in empathy"];
+        var randomFact = easterEgg[Math.floor(Math.random()*easterEgg.length)];
+        document.getElementById("funFact").textContent = randomFact;
+    }
