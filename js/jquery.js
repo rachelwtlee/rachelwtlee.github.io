@@ -70,10 +70,10 @@ $(document).ready(function() {
     })
 
     //INITIALIZING FLICKITY AND PACKERY
-    var $carousel = $('.carousel').flickity()
-    .flickity('next')
-    .flickity( 'select', 5 );
-    });
+    // var $carousel = $('.carousel').flickity()
+    // .flickity('next')
+    // .flickity( 'select', 5 );
+    // });
 
     // $('.js-packery').packery({
     //   itemSelector: 'gridItem',
