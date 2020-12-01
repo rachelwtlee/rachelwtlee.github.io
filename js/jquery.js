@@ -61,19 +61,7 @@ $(document).ready(function() {
         $("#lg").css("cursor","");
     })
 
-    $("#zero").click(function () {
-        window.location.replace("zero.html")
-    })
-
-    $("#linkedin").click(function () {
-      window.location.replace("adaptive-linkedin.html")
-    })
-
-    $("#fb").click(function () {
-      window.location.replace("fb-internship.html")
-    })
-
-    //INITIALIZING FLICKITY
+    //INITIALIZING FLICKITY AND PACKERY
     var $carousel = $('.carousel').flickity()
     .flickity('next')
     .flickity( 'select', 5 );
