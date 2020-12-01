@@ -350,10 +350,10 @@ iframe {
   padding: 3em 0 3em 0;
 }
 
-.gridItem { width: 25%; }
-.gridItem.w2 { width: 62.5%; }
-.gridItem.w3 { width: 73%; }
-.gridItem.w4 { width: 49%; }
+.gridItem { width: 25%; margin: 0.3em;}
+.gridItem.w2 { width: 61.5%; }
+.gridItem.w3 { width: 72%; }
+.gridItem.w4 { width: 48%; }
 .gridItem.w5 { width: 100%; }
 
 /* FLIKITY CAROUSEL */

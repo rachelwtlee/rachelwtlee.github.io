@@ -4,3 +4,10 @@ function fact() {
     var randomFact = easterEgg[Math.floor(Math.random()*easterEgg.length)];
     document.getElementById("funFact").textContent = randomFact;
 }
+
+var elem = document.querySelector('.js-packery');
+var pckry = new Packery( elem, {
+  // options
+  itemSelector: '.gridItem',
+  gutter: 10
+});
