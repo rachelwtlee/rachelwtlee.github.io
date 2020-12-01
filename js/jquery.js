@@ -78,3 +78,8 @@ $(document).ready(function() {
     .flickity('next')
     .flickity( 'select', 5 );
     });
+
+    $('.js-packery').packery({
+      itemSelector: 'gridItem',
+      gutter: 20
+    });
