@@ -2,17 +2,17 @@ $(document).ready(function() {
     $(".inlineImg").hover(function() {
         $("#rachelImg").toggleClass("show");
         $(".leftContent").toggleClass("hide");
-    });
+    })
 
     $("#super").hover(function() {
         $("#superContent1").toggleClass("show");
         $(".leftContent").toggleClass("hide");
-    });
+    })
 
     $("#super2").hover(function() {
         $("#superContent2").toggleClass("show");
         $(".leftContent").toggleClass("hide");
-    });
+    })
 
     //IMAGE ZOOM ON HOVER
     $(".imgOver").hover(function() {
@@ -84,4 +84,4 @@ $(document).ready(function() {
     $grid.imagesLoaded().progress( function() {
       $grid.packery();
     });
-// });
+// })
