@@ -84,3 +84,4 @@ $(document).ready(function() {
         }, function() {
         $("#lg").css("cursor","");
     });
+});
