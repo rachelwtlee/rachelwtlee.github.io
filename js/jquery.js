@@ -84,4 +84,4 @@ $(document).ready(function() {
     $grid.imagesLoaded().progress( function() {
       $grid.packery();
     });
-});
+// });
