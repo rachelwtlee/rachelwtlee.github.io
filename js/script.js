@@ -5,14 +5,9 @@ function fact() {
     document.getElementById("funFact").textContent = randomFact;
 }
 
-var elem = document.querySelector('.js-packery');
-var pckry = new Packery( elem, {
-  itemSelector: '.gridItem',
-  gutter: 10
-});
-
-var elem = document.querySelector('.carousel');
-var flkty = new Flickity( elem, {
-  cellAlign: 'left',
-  contain: true
-});
+// var elem = document.querySelector('.js-packery');
+// var pckry = new Packery( elem, {
+//   // options
+//   itemSelector: '.gridItem',
+//   gutter: 10
+// });
