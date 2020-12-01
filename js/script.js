@@ -5,8 +5,13 @@ function fact() {
     document.getElementById("funFact").textContent = randomFact;
 }
 
-// var elem = document.querySelector('.js-packery');
-// var pckry = new Packery( elem, {
-//   itemSelector: '.gridItem',
-//   gutter: 10
-// });
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+     document.getElementById("emNext").style.display = "block";
+     document.getElementById("leftSummary").style.display = "none";
+   }
+   else {
+     document.getElementById("emNext").style.display = "none";
+     document.getElementById("leftSummary").style.display = "block";
+   }
+});
