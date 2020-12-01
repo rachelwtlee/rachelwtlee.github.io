@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     $("#em").click(function () {
         window.location.replace("em.html")
-    });
+    })
 
     $("#em").hover(function () {
         $("#em").css("cursor","pointer");
@@ -67,5 +67,21 @@ $(document).ready(function() {
         $("#lg").css("cursor","pointer");
         }, function() {
         $("#lg").css("cursor","");
+    });
+
+    //INITIALIZING FLICKITY AND PACKERY
+    var $carousel = $('.carousel').flickity()
+    .flickity('next')
+    .flickity( 'select', 5 );
+    });
+
+    $(".js-packery").packery({
+      itemSelector: 'gridItem',
+      gutter: 50
+    });
+
+    var $grid = $('.js-packery').packery({});
+    $grid.imagesLoaded().progress( function() {
+      $grid.packery();
     });
 });
