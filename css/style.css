@@ -366,15 +366,15 @@ iframe {
 .gridItem.w4 { width: 48%; }
 .gridItem.w5 { width: 100%; }
 
+.imgFull {
+  grid-column: 1 / 9;
+  padding-bottom: 1.5em;
+}
+
 /* FLIKITY CAROUSEL */
 .carousel {
   grid-column: 1 / 9;
   padding: 2em 0 0.5em 0;
-}
-
-.imgFull {
-  grid-column: 1 / 9;
-  padding-bottom: 1.5em;
 }
 
 .carousel-cell {
