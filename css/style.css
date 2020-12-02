@@ -366,12 +366,6 @@ iframe {
 .gridItem.w4 { width: 48%; }
 .gridItem.w5 { width: 100%; }
 
-.item {
-  display: inline-flex;
-  float: left;
-  /* position: absolute; */
-}
-
 /* FLIKITY CAROUSEL */
 .carousel {
   grid-column: 1 / 9;
