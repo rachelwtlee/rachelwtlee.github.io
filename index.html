@@ -18,6 +18,16 @@
         <script type="text/javascript" src="js/script.js"></script>
     </head>
 
+    <script>
+        var grid = document.querySelector('.js-packery');
+        var pckry = new Packery(grid, { itemSelector: '.gridItem', gutter: 50 });
+
+        var $grid = $('.js-packery').packery({});
+        $grid.imagesLoaded().progress( function() {
+          $grid.packery();
+        });
+    </script>
+
     <header>
         <div class="headerGrid">
           <div class="intro">
