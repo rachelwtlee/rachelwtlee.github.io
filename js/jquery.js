@@ -75,9 +75,11 @@ $(document).ready(function() {
     .flickity( 'select', 5 );
     });
 
-    $(".js-packery").packery({
-      itemSelector: 'gridItem',
-      gutter: 50
+    $( window ).load(function(){
+      $(".js-packery").packery({
+        itemSelector: 'gridItem',
+        gutter: 50
+      });
     });
 
     var $grid = $('.js-packery').packery({});
