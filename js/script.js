@@ -23,9 +23,9 @@ function aigaOut() {
 
 function emOver() {
   document.getElementById("em").style.cursor = "pointer";
-  document.getElementById("em").style.background = "#FCE0A8";
+  document.getElementById("em").style.background = "#F4EBE0";
   document.getElementById("em").style.transition = "0.25s ease-in";
-  document.getElementById("emHeader").style.background = "#EDAF70";
+  document.getElementById("emHeader").style.background = "#F9C151";
   document.getElementById("emHeader").style.transition = "0.25s ease-in";
   document.getElementById("emText").style.color = "#000000";
 }
@@ -40,9 +40,9 @@ function emOut() {
 
 function lgOver() {
   document.getElementById("lg").style.cursor = "pointer";
-  document.getElementById("lg").style.background = "#DA4F4F";
+  document.getElementById("lg").style.background = "#DAE6F6";
   document.getElementById("lg").style.transition = "0.25s ease-in";
-  document.getElementById("lgHeader").style.background = "#6E4ACC";
+  document.getElementById("lgHeader").style.background = "#8868AD";
   document.getElementById("lgHeader").style.transition = "0.25s ease-in";
 }
 
