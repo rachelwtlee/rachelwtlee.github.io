@@ -43,12 +43,6 @@ $(document).ready(function() {
         window.location.replace("aiga-census.html")
     });
 
-    $("#aiga").hover(function () {
-        $("#aiga").css("cursor","pointer");
-        }, function() {
-        $("#aiga").css("cursor","");
-    });
-
     $("#em").click(function () {
         window.location.replace("em.html")
     })
@@ -61,12 +55,6 @@ $(document).ready(function() {
 
     $("#lg").click(function () {
         window.location.replace("lg.html")
-    });
-
-    $("#lg").hover(function () {
-        $("#lg").css("cursor","pointer");
-        }, function() {
-        $("#lg").css("cursor","");
     });
 
     //INITIALIZING FLICKITY AND PACKERY
@@ -86,9 +74,6 @@ $(document).ready(function() {
     });
 
     $('.grid').masonry({
-  // options
-  itemSelector: '.gridItem',
-  columnWidth: 100
-});
-    // });
-// })
+      itemSelector: '.gridItem',
+      columnWidth: 100
+    });
