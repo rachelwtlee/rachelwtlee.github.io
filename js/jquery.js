@@ -75,15 +75,18 @@ $(document).ready(function() {
     .flickity( 'select', 5 );
     });
 
-    $( window ).load(function(){
-      $(".js-packery").packery({
-        itemSelector: 'gridItem',
-        gutter: 50
-      });
-    });
-
     var $grid = $('.js-packery').packery({});
     $grid.imagesLoaded().progress( function() {
       $grid.packery();
     });
+
+    $(".js-packery").packery({
+      itemSelector: 'gridItem',
+      gutter: 50
+    });
+    // 
+    // var $grid = $('.js-packery').packery({});
+    // $grid.imagesLoaded().progress( function() {
+    //   $grid.packery();
+    // });
 // })
