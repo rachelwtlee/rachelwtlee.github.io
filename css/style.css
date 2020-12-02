@@ -355,7 +355,7 @@ iframe {
 .deliverablesText4 {grid-column: 4 / 8; padding-bottom: 3em;}
 
 /*PACKERY LIBRARY*/
-.js-packery, .grid {
+.grid {
   grid-column: 1 / 9;
   padding: 3em 0 3em 0;
 }

@@ -7,8 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Links to external libraries and CSS reset -->
         <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-        <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
@@ -123,12 +122,19 @@
             <p class="projectText">We printed and bound a 120 page book. With identical content as the site, rather than linking to external content, we kept all
               ‘portals’ within the book via sticky notes. Each sticky contains a reference to a related quote in a different category. </p>
 
-            <div class="js-packery">
+            <div class="grid">
+                <div class="gridItem"><img src="images/aiga/blue.jpg"></div>
+                <div class="gridItem w2"><img src="images/aiga/yellow.jpg"></div>
+                <div class="gridItem"><img src="images/aiga/green.jpg"></div>
+                <div class="gridItem w3"><img src="images/aiga/flip.gif"></div>
+            </div>
+
+            <!-- <div class="js-packery">
               <div class="gridItem"><img src="images/aiga/blue.jpg"></div>
               <div class="gridItem w2"><img src="images/aiga/yellow.jpg"></div>
               <div class="gridItem"><img src="images/aiga/green.jpg"></div>
               <div class="gridItem w3"><img src="images/aiga/flip.gif"></div>
-           </div>
+           </div> -->
            <!-- Parsing Data -->
             <h5 class="projectHeading">Parsing Data</h5>
             <p class="projectText">Using Python and NLTK to parse through census data, we identified the 150 bi-grams and tri-grams that appear most
