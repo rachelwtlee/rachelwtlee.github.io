@@ -17,6 +17,9 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </head>
+    <script>
+        window.onload = fact;
+    </script>
 
     <header>
         <div class="headerGrid">
@@ -29,7 +32,7 @@
         </div>
     </header>
 
-    <body onload="fact();">
+    <body>
       <!-- LEFT CONTAINER -->
         <main class="leftContainer">
             <div class="leftContent">
@@ -128,7 +131,6 @@
                 <div class="gridItem"><img src="images/aiga/green.jpg"></div>
                 <div class="gridItem w3"><img src="images/aiga/flip.gif"></div>
             </div>
-
            <!-- Parsing Data -->
             <h5 class="projectHeading">Parsing Data</h5>
             <p class="projectText">Using Python and NLTK to parse through census data, we identified the 150 bi-grams and tri-grams that appear most
