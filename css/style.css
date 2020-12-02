@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Vulf Sans', sans-serif;
+    font-family: 'Vulf Sans Regular', sans-serif;
     font-size: 0.9em;
     letter-spacing: 0.5px;
     line-height: 1.6em;
@@ -121,6 +121,15 @@ a:hover {
 
 .sectionTop {
   padding-top: 1.5em;
+}
+
+#emNext {
+  display: none;
+  opacity: 0;
+}
+
+.leftContent {
+  display: block;
 }
 
 .leftContent.hide {
