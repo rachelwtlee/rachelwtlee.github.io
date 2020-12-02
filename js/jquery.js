@@ -80,7 +80,9 @@ $(document).ready(function() {
       gutter: 50
     });
 
-    var $grid = $('.js-packery').packery({});
-    $grid.imagesLoaded().progress( function() {
-      $grid.packery();
+    $(document).ready() = function() {
+      var $grid = $('.js-packery').packery({});
+      $grid.imagesLoaded().progress( function() {
+        $grid.packery();
+      });
     });
