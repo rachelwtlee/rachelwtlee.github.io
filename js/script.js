@@ -7,13 +7,17 @@ function fact() {
 
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-     document.getElementById("emNext").style.display = "block";
-     document.getElementById("emNext").style.opacity = "1";
-     document.getElementById("leftSummary").style.display = "none";
+     document.getElementById("nextProject").style.display = "block";
+     document.getElementById("nextProject").style.opacity = "1";
+     document.getElementById("featureNumber").style.display = "none";
+     document.getElementById("featureTitle").style.display = "none";
+     document.getElementById("featureSummary").style.display = "none";
    }
    else {
-     document.getElementById("emNext").style.display = "none";
-     document.getElementById("emNext").style.opacity = "0";
-     document.getElementById("leftSummary").style.display = "block";
+     document.getElementById("nextProject").style.display = "none";
+     document.getElementById("nextProject").style.opacity = "0";
+     document.getElementById("featureNumber").style.display = "block";
+     document.getElementById("featureTitle").style.display = "block";
+     document.getElementById("featureSummary").style.display = "block";
    }
 });

@@ -84,4 +84,11 @@ $(document).ready(function() {
     $grid.imagesLoaded().progress( function() {
       $grid.packery();
     });
+
+    $('.grid').masonry({
+  // options
+  itemSelector: '.gridItem',
+  columnWidth: 100
+});
+    // });
 // })

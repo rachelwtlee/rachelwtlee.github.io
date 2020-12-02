@@ -1,4 +1,4 @@
-html {
+html, .bodyLink {
     font-family: 'vulf_sansregular', sans-serif;
 }
 
@@ -80,6 +80,7 @@ a:hover {
     font-family: 'vulf_sanslight', sans-serif;
     vertical-align: super;
     font-size: small;
+    text-decoration: !important none;
 }
 
 /*HEADER NAV*/
@@ -123,7 +124,7 @@ a:hover {
   padding-top: 1.5em;
 }
 
-#emNext {
+#nextProject {
   display: none;
   opacity: 0;
 }
@@ -267,7 +268,7 @@ a:hover {
 }
 
 .leftImg img, .featureImg1 img, .featureImg2 img, .featureImg3 img, .deliverablesImg1 img,
-.deliverablesImg2 img, .deliverablesImg3 img, .deliverablesImg4 img, .js-packery img,
+.deliverablesImg2 img, .deliverablesImg3 img, .deliverablesImg4 img, .gridItem img,
 .carousel-cell img, .imgFull img, .aboutImg img {
     width: 100%;
     object-fit: contain;
@@ -354,16 +355,22 @@ iframe {
 .deliverablesText4 {grid-column: 4 / 8; padding-bottom: 3em;}
 
 /*PACKERY LIBRARY*/
-.js-packery {
+.js-packery, .grid {
   grid-column: 1 / 9;
   padding: 3em 0 3em 0;
 }
 
-.gridItem { width: 25%; margin: 0.3em;}
+.gridItem {width: 25%; margin: 0.3em; float: left;}
 .gridItem.w2 { width: 61.5%; }
 .gridItem.w3 { width: 72%; }
 .gridItem.w4 { width: 48%; }
 .gridItem.w5 { width: 100%; }
+
+.item {
+  display: inline-flex;
+  float: left;
+  /* position: absolute; */
+}
 
 /* FLIKITY CAROUSEL */
 .carousel {
