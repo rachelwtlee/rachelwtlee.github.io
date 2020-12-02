@@ -1,17 +1,17 @@
 html {
-    font-family: 'Vulf Sans Regular', sans-serif;
+    font-family: 'vulf_sansregular', sans-serif;
 }
 
 /*TEXT STYLING*/
 h1 {
-    font-family: 'Self Modern', sans-serif;
+    font-family: 'self_modernregular', sans-serif;
     font-size: 1.5em;
     line-height: 1.6em;
     padding-bottom: 1em;
 }
 
 h2 {
-    font-family: 'Self Modern', sans-serif;
+    font-family: 'self_modernregular', sans-serif;
     font-size: 1.25em;
     font-weight: 500;
     line-height: 1.5em;
@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Vulf Sans Regular', sans-serif;
+    font-family: 'vulf_sansregular', sans-serif;
     font-size: 0.9em;
     letter-spacing: 0.5px;
     line-height: 1.6em;
@@ -35,27 +35,27 @@ header h3 {
 }
 
 h4 {
-    font-family: 'Vulf Sans Light', sans-serif;
+    font-family: 'vulf_sanslight', sans-serif;
     font-size: 0.9em;
     letter-spacing: 0.5px;
     line-height: 1.5em;
 }
 
 h5 {
-    font-family: 'Vulf Sans', sans-serif;
+    font-family: 'vulf_sansregular', sans-serif;
     font-size: 2em;
     line-height: 1.5em;
     padding-bottom: 1em;
 }
 
 p {
-    font-family: 'Self Modern', sans-serif;
+    font-family: 'self_modernregular', sans-serif;
     font-size: 1em;
     line-height: 1.75em;
 }
 
 figcaption {
-    font-family: 'Self Modern', sans-serif;
+    font-family: 'self_modernregular', sans-serif;
     font-size: 0.7em;
     line-height: 1.6em;
     padding: 1.5em 0 2em 0;
@@ -73,11 +73,11 @@ a:hover {
 }
 
 #punct {
-    font-family: 'Vulf Sans', sans-serif;
+    font-family: 'vulf_sansregular', sans-serif;
 }
 
 .superscript {
-    font-family: 'Vulf Sans Light', sans-serif;
+    font-family: 'vulf_sanslight', sans-serif;
     vertical-align: super;
     font-size: small;
 }
