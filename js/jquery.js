@@ -57,23 +57,19 @@ $(document).ready(function() {
         window.location.replace("lg.html")
     });
 
-    //INITIALIZING FLICKITY AND PACKERY
+    //INITIALIZING MASONRY AND PACKERY
     var $carousel = $('.carousel').flickity()
     .flickity('next')
     .flickity( 'select', 5 );
     });
 
-    $(".js-packery").packery({
-      itemSelector: 'gridItem',
-      gutter: 50
-    });
-
-    var $grid = $('.js-packery').packery({});
-    $grid.imagesLoaded().progress( function() {
-      $grid.packery();
-    });
-
-    $('.grid').masonry({
+    var $grid = $('.grid').masonry({
       itemSelector: '.gridItem',
-      columnWidth: 100
+      // columnWidth: 100
+      percentPosition: true
+    });
+
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+      $carousel.flikity();
     });
