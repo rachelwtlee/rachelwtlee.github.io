@@ -1,3 +1,4 @@
+/*Random fact called from aray*/
 function fact() {
     var easterEgg = ["is a lover of eggs", "is a designer in training", "designs for community", "values sincerity",
     "is an introvert", "is a storyteller", "loves the color yellow", "believes in empathy"];
@@ -5,6 +6,7 @@ function fact() {
     document.getElementById("funFact").textContent = randomFact;
 }
 
+/*Feature projects styling on home page*/
 function aigaOver() {
   document.getElementById("aiga").style.cursor = "pointer";
   document.getElementById("aiga").style.background = "#80CF91";
@@ -54,6 +56,7 @@ function lgOut() {
   document.getElementById("lgHeader").style.transition = "0.25s ease-out";
 }
 
+/*Display next project in left panel when user scrolls to bottom of page*/
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
      document.getElementById("nextProject").style.display = "block";

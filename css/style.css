@@ -1,8 +1,8 @@
+/*TEXT STYLING*/
 html, .bodyLink {
     font-family: 'vulf_sansregular', sans-serif;
 }
 
-/*TEXT STYLING*/
 h1 {
     font-family: 'self_modernregular', sans-serif;
     font-size: 1.5em;
@@ -83,7 +83,7 @@ a:hover {
     text-decoration: !important none;
 }
 
-/*HEADER NAV*/
+/*HEADER NAV GRID*/
 .intro { grid-area: intro;}
 .menuItems {display: flex; justify-content: flex-end;}
 #work{ grid-area: work; }
@@ -114,6 +114,11 @@ a:hover {
 
 .paragraphBottom, #end, .featureSkills {
     padding-bottom: 1.5em;
+}
+
+.projectSection {
+  padding-top: 3em;
+  background: pink;
 }
 
 .sectionSpace {
@@ -170,10 +175,6 @@ a:hover {
     box-sizing: border-box;
     width: 75vw;
     float: right;
-}
-
-.scroll {
-  scroll-behavior: smooth;
 }
 
 #intro {
@@ -252,6 +253,7 @@ a:hover {
   grid-row: 3;
 }
 
+/*Feature project image styling on hover*/
 .imgOver, .imgOver2, .imgOver3 {
   overflow: hidden;
 }
@@ -274,7 +276,7 @@ a:hover {
     object-fit: contain;
 }
 
-/* CASE STUDIES */
+/* CASE STUDIES STYLING*/
 #title { grid-area: title;}
 #skills {grid-area: skills;}
 #timeframe { grid-area: timeframe; }
@@ -340,6 +342,7 @@ iframe {
     left: 0;
 }
 
+/*Project deliverables mismatched grid*/
 .deliverablesHeading1 {grid-column: 4 / 7;}
 .deliverablesImg1 {grid-column: 2 / 8; padding-bottom: 1.5em;}
 .deliverablesText1 {grid-column: 2 / 6; padding-bottom: 3em;}
@@ -370,7 +373,7 @@ iframe {
   padding-bottom: 1.5em;
 }
 
-/* FLIKITY CAROUSEL */
+/* FLICKITY CAROUSEL*/
 .carousel {
   grid-column: 1 / 9;
   padding: 2em 0 0.5em 0;
@@ -409,11 +412,6 @@ path.arrow {
 
 .clear {
     clear: both;
-}
-
-.projectSection {
-  padding-top: 3em;
-  background: pink;
 }
 
 /* MEDIA QUERIES */

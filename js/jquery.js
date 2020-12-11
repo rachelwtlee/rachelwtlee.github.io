@@ -14,7 +14,7 @@ $(document).ready(function() {
         $(".leftContent").toggleClass("hide");
     })
 
-    //IMAGE ZOOM ON HOVER
+    //Image zoom on hover
     $(".imgOver").hover(function() {
         $(".over").toggleClass("zoom");
     })
@@ -27,7 +27,7 @@ $(document).ready(function() {
         $(".over3").toggleClass("zoom");
     });
 
-    // RANDOM HOVER COLOR
+    //Randomly change hover color on zoom
     var colorArray = ["#F5550E", "#80CF91", "#2AAEF9", "#FFCCF0"];
     $(".colorChange").hover(function() {
       var colorPick = colorArray[Math.floor(Math.random()*colorArray.length)];
@@ -38,7 +38,7 @@ $(document).ready(function() {
       $(".colorChange").css("cursor", "");
     });
 
-    //PAGES
+    //Navigate to new pages on click
     $("#aiga").click(function () {
         window.location.replace("aiga-census.html")
     });
@@ -47,17 +47,11 @@ $(document).ready(function() {
         window.location.replace("em.html")
     })
 
-    $("#em").hover(function () {
-        $("#em").css("cursor","pointer");
-        }, function() {
-        $("#em").css("cursor","");
-    });
-
     $("#lg").click(function () {
         window.location.replace("lg.html")
     });
 
-    //INITIALIZING MASONRY AND PACKERY
+    //INITIALIZING MASONRY AND PACKERY LIBRARIES
     var $carousel = $('.carousel').flickity()
     .flickity('next')
     .flickity( 'select', 5 );
@@ -65,7 +59,6 @@ $(document).ready(function() {
 
     var $grid = $('.grid').masonry({
       itemSelector: '.gridItem',
-      // columnWidth: 100
       percentPosition: true
     });
 
