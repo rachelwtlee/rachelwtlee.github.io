@@ -1,10 +1,85 @@
-/*Random fact called from aray*/
-function fact() {
-    var easterEgg = ["is a lover of eggs", "is a designer in training", "designs for community", "values sincerity",
-    "is an introvert", "is a storyteller", "loves the color yellow", "believes in empathy"];
-    var randomFact = easterEgg[Math.floor(Math.random()*easterEgg.length)];
-    document.getElementById("funFact").textContent = randomFact;
+/* Random fun fact displayed in header */
+var EASTER_EGGS = [
+  "needs to believe in the why",
+  "is happiest outside",
+  "makes tiny fruits",
+  "thinks a good typeface changes everything",
+  "decides what to order when the waiter arrives",
+  "picks up what needs picking up",
+  "loves a good puzzle",
+  "always has a book on the go",
+  "believes empathy is a design tool",
+  "crafts with care"
+];
+
+var FUN_FACT_STORAGE_KEY = "headerFunFactIndex";
+
+function shuffleIndexes(total) {
+  var indexes = [];
+  var i;
+
+  for (i = 0; i < total; i += 1) {
+    indexes.push(i);
+  }
+
+  for (i = indexes.length - 1; i > 0; i -= 1) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = indexes[i];
+    indexes[i] = indexes[j];
+    indexes[j] = temp;
+  }
+
+  return indexes;
 }
+
+function pickFactIndex(total, previousIndex) {
+  var indexes = shuffleIndexes(total);
+
+  if (total <= 1 || previousIndex === null || previousIndex < 0 || previousIndex >= total) {
+    return indexes[0];
+  }
+
+  if (indexes[0] === previousIndex) {
+    return indexes[1];
+  }
+
+  return indexes[0];
+}
+
+function selectHeaderFact(funFactEl) {
+  var isMobile = window.matchMedia("(max-width: 504px)").matches;
+  var previousIndex = parseInt(sessionStorage.getItem(FUN_FACT_STORAGE_KEY), 10);
+  var usablePreviousIndex = Number.isNaN(previousIndex) ? null : previousIndex;
+
+  if (isMobile) {
+    // Keep the header compact on mobile.
+    funFactEl.textContent = "";
+    return;
+  }
+
+  var selectedIndex = pickFactIndex(EASTER_EGGS.length, usablePreviousIndex);
+  funFactEl.textContent = EASTER_EGGS[selectedIndex];
+  sessionStorage.setItem(FUN_FACT_STORAGE_KEY, String(selectedIndex));
+}
+
+function fact() {
+  var funFactEl = document.getElementById("funFact");
+  if (!funFactEl) {
+    return;
+  }
+
+  // Start hidden so text can ease in smoothly after assignment.
+  funFactEl.classList.remove("is-visible");
+  selectHeaderFact(funFactEl);
+
+  if (!window.matchMedia("(max-width: 504px)").matches && funFactEl.textContent) {
+    window.requestAnimationFrame(function() {
+      funFactEl.classList.add("is-visible");
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", fact);
 
 /*Feature projects styling on home page*/
 function aigaOver() {
