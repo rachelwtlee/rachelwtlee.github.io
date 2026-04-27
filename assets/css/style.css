@@ -1,26 +1,38 @@
+:root {
+    --font-body: 'neue_haas_unica_w1g', sans-serif;
+    --font-body-thin: 'neue_haas_unica_w1g_thin', sans-serif;
+    --font-body-light: 'neue_haas_unica_w1g_light', sans-serif;
+    --font-title: 'favorit_pro_regular', sans-serif;
+    --font-heading: 'favorit_pro_medium', sans-serif;
+    --font-meta: 'favorit_pro_book', sans-serif;
+    --font-title-light: 'favorit_pro_light', sans-serif;
+    --font-legacy-sans: 'vulf_sansregular', sans-serif;
+    --font-legacy-sans-light: 'vulf_sanslight', sans-serif;
+    --font-legacy-serif: 'self_modernregular', sans-serif;
+}
+
 /*TEXT STYLING*/
 html, .bodyLink {
-    font-family: 'vulf_sansregular', sans-serif;
+    font-family: var(--font-body);
 }
 
 h1 {
-    font-family: 'self_modernregular', sans-serif;
+    font-weight: 400;
     font-size: 1.5em;
-    line-height: 1.6em;
+    line-height: 1.68em;
+    letter-spacing: -0.01em;
     padding-bottom: 1em;
 }
 
 h2 {
-    font-family: 'self_modernregular', sans-serif;
     font-size: 1.25em;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5em;
     padding-bottom: 1em;
 }
 
 h3 {
-    font-family: 'vulf_sansregular', sans-serif;
-    font-size: 0.9em;
+    font-size: 1em;
     letter-spacing: 0.5px;
     line-height: 1.6em;
 }
@@ -36,32 +48,57 @@ header h3 {
 }
 
 h4 {
-    font-family: 'vulf_sanslight', sans-serif;
     font-size: 0.9em;
-    letter-spacing: 0.5px;
-    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    line-height: 1.4em;
 }
 
 h5 {
-    font-family: 'vulf_sansregular', sans-serif;
     font-size: 2em;
     line-height: 1.5em;
     padding-bottom: 1em;
 }
 
 p {
-    font-family: 'self_modernregular', sans-serif;
     font-size: 1em;
+    letter-spacing: 0.02em;
     line-height: 1.75em;
 }
 
 figcaption {
-    font-family: 'self_modernregular', sans-serif;
     font-size: 0.7em;
     line-height: 1.6em;
     padding: 1.5em 0 2em 0;
-    color: rgba (0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     text-align: center;
+}
+
+h1 {
+    font-family: var(--font-title-light);
+}
+
+h2 {
+    font-family: var(--font-title-light);
+}
+
+h3, #punct {
+    font-family: var(--font-title);
+}
+
+h5 {
+    font-family: var(--font-meta);
+}
+
+h4 {
+    font-family: var(--font-body-light);
+}
+
+.superscript {
+    font-family: var(--font-body-light);
+}
+
+p, figcaption {
+    font-family: var(--font-body);
 }
 
 a, a:visited {
@@ -74,14 +111,14 @@ a:hover {
 }
 
 #punct {
-    font-family: 'vulf_sansregular', sans-serif;
+    font-family: var(--font-legacy-sans);
 }
 
 .superscript {
-    font-family: 'vulf_sanslight', sans-serif;
+    font-family: var(--font-body-light);
     vertical-align: super;
     font-size: small;
-    text-decoration: !important none;
+    text-decoration: none !important;
 }
 
 /*HEADER NAV GRID*/
@@ -134,6 +171,11 @@ a:hover {
     width: 25vw;
     height: 100vh;
     border-right: 1px black solid;
+}
+
+.leftContainer h4 {
+    line-height: 1.68em;
+    word-spacing: 0.02em;
 }
 
 .paragraphBottom, #end, .featureSkills {

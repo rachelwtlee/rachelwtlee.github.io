@@ -34,3 +34,59 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'neue_haas_unica_w1g';
+    src: url('../fonts/Neue Haas Unica W1G.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'neue_haas_unica_w1g_thin';
+    src: url('../fonts/Neue Haas Unica W1G Thin.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'neue_haas_unica_w1g_light';
+    src: url('../fonts/Neue Haas Unica W1G Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'favorit_pro_regular';
+    src: url('../fonts/FavoritPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'favorit_pro_medium';
+    src: url('../fonts/FavoritPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'favorit_pro_book';
+    src: url('../fonts/FavoritPro-Book.woff2') format('woff2');
+    font-weight: 350;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'favorit_pro_light';
+    src: url('../fonts/FavoritPro-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
