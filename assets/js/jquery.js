@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 
     //Randomly change hover color on zoom
-    var colorArray = ["#F5550E", "#80CF91", "#2AAEF9", "#FFCCF0"];
+    var colorArray = ["#E84915", "#3BA8A0", "#1A7FCC", "#D94F7C"];
     $(".colorChange").hover(function() {
       var colorPick = colorArray[Math.floor(Math.random()*colorArray.length)];
       $(this).css("color", colorPick);

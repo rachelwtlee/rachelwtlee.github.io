@@ -1,3 +1,10 @@
+/* Easter egg accent palette — each link and superscript gets its own random color */
+var ACCENT_COLORS = ['#2266CA', '#6C4DEB', '#F9C151', '#8868AD', '#F5550E'];
+
+function randomAccent() {
+  return ACCENT_COLORS[Math.floor(Math.random() * ACCENT_COLORS.length)];
+}
+
 /* Random fun fact displayed in header */
 var EASTER_EGGS = [
   "needs to believe in the why",
@@ -170,17 +177,48 @@ function lgOut() {
 /*Display next project in left panel when user scrolls to bottom of page*/
 $(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-     document.getElementById("nextProject").style.display = "block";
      document.getElementById("nextProject").style.opacity = "1";
-     document.getElementById("featureNumber").style.display = "none";
-     document.getElementById("featureTitle").style.display = "none";
-     document.getElementById("featureSummary").style.display = "none";
+     document.getElementById("nextProject").style.visibility = "visible";
+     document.getElementById("featureNumber").style.opacity = "0";
+     document.getElementById("featureTitle").style.opacity = "0";
+     document.getElementById("featureSummary").style.opacity = "0";
    }
    else {
-     document.getElementById("nextProject").style.display = "none";
      document.getElementById("nextProject").style.opacity = "0";
-     document.getElementById("featureNumber").style.display = "block";
-     document.getElementById("featureTitle").style.display = "block";
-     document.getElementById("featureSummary").style.display = "block";
+     document.getElementById("nextProject").style.visibility = "hidden";
+     document.getElementById("featureNumber").style.opacity = "1";
+     document.getElementById("featureTitle").style.opacity = "1";
+     document.getElementById("featureSummary").style.opacity = "1";
    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  /* Per-element random color for external links — squiggle colored on load, text on hover */
+  document.querySelectorAll('.bodyLink').forEach(function(el) {
+    var color = randomAccent();
+    el.style.textDecorationColor = color;
+    el.addEventListener('mouseenter', function() { el.style.color = color; });
+    el.addEventListener('mouseleave', function() { el.style.color = ''; });
+  });
+
+  /* Superscript: number always colored immediately, surrounding text fades on hover, left panel reveals */
+  document.querySelectorAll('.superscript').forEach(function(el) {
+    var color = randomAccent();
+    el.style.color = color;
+
+    var inline = el.closest('.inlineSuperscript');
+    if (inline) {
+      el.addEventListener('mouseenter', function() { inline.style.color = color; });
+      el.addEventListener('mouseleave', function() { inline.style.color = ''; });
+    }
+
+    var noteId = el.dataset.note || 'superContent1';
+    var note = document.getElementById(noteId);
+    if (note) {
+      el.addEventListener('mouseenter', function() { note.style.opacity = '1'; note.style.visibility = 'visible'; });
+      el.addEventListener('mouseleave', function() { note.style.opacity = '0'; note.style.visibility = 'hidden'; });
+    }
+  });
+
 });
