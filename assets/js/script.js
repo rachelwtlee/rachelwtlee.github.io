@@ -186,23 +186,42 @@ function lgOut() {
 
 /*Display next project in left panel when user scrolls to bottom of page*/
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-     document.getElementById("nextProject").style.opacity = "1";
-     document.getElementById("nextProject").style.visibility = "visible";
-     document.getElementById("featureNumber").style.opacity = "0";
-     document.getElementById("featureTitle").style.opacity = "0";
-     document.getElementById("featureSummary").style.opacity = "0";
-   }
-   else {
-     document.getElementById("nextProject").style.opacity = "0";
-     document.getElementById("nextProject").style.visibility = "hidden";
-     document.getElementById("featureNumber").style.opacity = "1";
-     document.getElementById("featureTitle").style.opacity = "1";
-     document.getElementById("featureSummary").style.opacity = "1";
-   }
+  var nextEl     = document.getElementById("nextProject");
+  if (!nextEl) return; // not a case study page
+
+  var numEl     = document.getElementById("featureNumber");
+  var titleEl   = document.getElementById("featureTitle");
+  var summaryEl = document.getElementById("featureSummary");
+
+  // >= instead of == avoids sub-pixel rounding failures in modern browsers
+  if ($(window).scrollTop() + $(window).height() >= $(document).height() - 2) {
+    nextEl.style.opacity = "1";
+    nextEl.style.visibility = "visible";
+    if (numEl)     numEl.style.opacity = "0";
+    if (titleEl)   titleEl.style.opacity = "0";
+    if (summaryEl) summaryEl.style.opacity = "0";
+  } else {
+    nextEl.style.opacity = "0";
+    nextEl.style.visibility = "hidden";
+    if (numEl)     numEl.style.opacity = "1";
+    if (titleEl)   titleEl.style.opacity = "1";
+    if (summaryEl) summaryEl.style.opacity = "1";
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  /* On case study pages, make footnote panels permanently visible in the left sidebar.
+     (#nextProject is only present on case study pages, not the home page.) */
+  if (document.getElementById('nextProject')) {
+    ['superContent1', 'superContent2'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
+      }
+    });
+  }
 
   /* Per-element random color for external links — squiggle colored on load, text on hover */
   document.querySelectorAll('.bodyLink').forEach(function(el) {
