@@ -55,7 +55,7 @@ h4 {
 }
 
 h5 {
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1.5em;
     padding-bottom: 1em;
 }
@@ -70,8 +70,15 @@ figcaption {
     font-size: 0.8em;
     line-height: 1.6em;
     padding: 1.5em 0 2em 0;
-    color: rgba(0, 0, 0, 0.8);
+    color: #626C74;
     text-align: center;
+}
+
+small {
+    font-size: 0.8em;
+    line-height: 1.6em;
+    padding-top: 0.2em;
+    color: #626C74;  
 }
 
 h1 {
@@ -262,21 +269,21 @@ img {
     cursor: pointer;
 }
 
-#rachelImg, #superContent2, #censusData {
+#rachelImg, #censusData {
     display: none;
 }
 
-#rachelImg.show, #superContent2.show{
+#rachelImg.show {
     display: block;
 }
 
-#superContent1 {
+#superContent1, #superContent2 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-#superContent1.show {
+#superContent1.show, #superContent2.show {
     opacity: 1;
     visibility: visible;
 }
@@ -631,5 +638,6 @@ path.arrow {
   .gridItem.w3 { width: 70%; }
   .gridItem.w4 { width: 45%; }
   .carousel-cell { width: 80%; }
-  .projectIntroGrid, .projectContent {padding: 0 3em 3em 3em;}
+  .projectIntroGrid, .projectContent {padding: 0 0.5em 1.5em 0.5em;}
+  #overview { grid-area: overview; padding-bottom: 0.5em;}
 }

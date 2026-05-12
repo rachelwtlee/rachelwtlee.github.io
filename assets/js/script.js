@@ -202,22 +202,25 @@ document.addEventListener('DOMContentLoaded', function() {
     el.addEventListener('mouseleave', function() { el.style.color = ''; });
   });
 
-  /* Superscript: number always colored immediately, surrounding text fades on hover, left panel reveals */
+  /* Superscript: number always colored immediately, text + panel reveal on hover over full inlineSuperscript */
   document.querySelectorAll('.superscript').forEach(function(el) {
     var color = randomAccent();
     el.style.color = color;
 
     var inline = el.closest('.inlineSuperscript');
+    var trigger = inline || el;
+
     if (inline) {
-      el.addEventListener('mouseenter', function() { inline.style.color = color; });
-      el.addEventListener('mouseleave', function() { inline.style.color = ''; });
+      inline.style.cursor = 'pointer';
+      trigger.addEventListener('mouseenter', function() { inline.style.color = color; });
+      trigger.addEventListener('mouseleave', function() { inline.style.color = ''; });
     }
 
     var noteId = el.dataset.note || 'superContent1';
     var note = document.getElementById(noteId);
     if (note) {
-      el.addEventListener('mouseenter', function() { note.style.opacity = '1'; note.style.visibility = 'visible'; });
-      el.addEventListener('mouseleave', function() { note.style.opacity = '0'; note.style.visibility = 'hidden'; });
+      trigger.addEventListener('mouseenter', function() { note.style.opacity = '1'; note.style.visibility = 'visible'; });
+      trigger.addEventListener('mouseleave', function() { note.style.opacity = '0'; note.style.visibility = 'hidden'; });
     }
   });
 
