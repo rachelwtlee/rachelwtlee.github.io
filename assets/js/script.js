@@ -249,7 +249,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var note = document.getElementById(noteId);
     if (note) {
       trigger.addEventListener('mouseenter', function() { note.style.opacity = '1'; note.style.visibility = 'visible'; });
-      trigger.addEventListener('mouseleave', function() { note.style.opacity = '0'; note.style.visibility = 'hidden'; });
     }
   });
 
