@@ -472,7 +472,7 @@ iframe {
 #cpas .featureImg2 img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit:fill;
     display: block;
 }
 
@@ -488,7 +488,6 @@ iframe {
     margin-top:-18em;
     margin-bottom: 0em;
     position: relative;
-    z-index: 0;
 }
 
 #cv .featureImg2 {
@@ -496,13 +495,9 @@ iframe {
     grid-row: 1;
     margin-top: 0;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
-/* AIGA - reduce top padding and pull second image up toward text */
-#aiga .featureContent {
-    padding-top: 1.5em;
-}
 
 #aiga .featureImg2 {
     margin-top: -14em;
