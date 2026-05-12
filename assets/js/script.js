@@ -81,6 +81,16 @@ function fact() {
 
   if (!window.matchMedia("(max-width: 504px)").matches && funFactEl.textContent) {
     window.requestAnimationFrame(function() {
+      // Hide the fact if it overlaps the nav links.
+      var workEl = document.getElementById("work");
+      if (workEl) {
+        var factRight = funFactEl.getBoundingClientRect().right;
+        var navLeft = workEl.getBoundingClientRect().left;
+        if (factRight > navLeft - 8) {
+          funFactEl.textContent = "";
+          return;
+        }
+      }
       funFactEl.classList.add("is-visible");
     });
   }
