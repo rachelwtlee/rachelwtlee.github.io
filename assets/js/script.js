@@ -82,6 +82,42 @@ function fact() {
 document.addEventListener("DOMContentLoaded", fact);
 
 /*Feature projects styling on home page*/
+function cpasOver() {
+  document.getElementById("cpas").style.cursor = "pointer";
+  document.getElementById("cpas").style.background = "#DCECFE";
+  document.getElementById("cpas").style.transition = "0.25s ease-in";
+  document.getElementById("cpasHeader").style.background = "#2266CA";
+  document.getElementById("cpasHeader").style.color = "#F6F6F2";
+  document.getElementById("cpasHeader").style.transition = "0.25s ease-in";
+}
+
+function cpasOut() {
+  document.getElementById("cpas").style.cursor = "";
+  document.getElementById("cpas").style.background = "";
+  document.getElementById("cpas").style.transition = "0.25s ease-out";
+  document.getElementById("cpasHeader").style.background = "";
+  document.getElementById("cpasHeader").style.color = "";
+  document.getElementById("cpasHeader").style.transition = "0.25s ease-out";
+}
+
+function cvOver() {
+  document.getElementById("cv").style.cursor = "pointer";
+  document.getElementById("cv").style.background = "#C1FAE7";
+  document.getElementById("cv").style.transition = "0.25s ease-in";
+  document.getElementById("cvHeader").style.background = "#6C4DEB";
+  document.getElementById("cvHeader").style.color = "#F6F6F2";
+  document.getElementById("cvHeader").style.transition = "0.25s ease-in";
+}
+
+function cvOut() {
+  document.getElementById("cv").style.cursor = "";
+  document.getElementById("cv").style.background = "";
+  document.getElementById("cv").style.transition = "0.25s ease-out";
+  document.getElementById("cvHeader").style.background = "";
+  document.getElementById("cvHeader").style.color = "";
+  document.getElementById("cvHeader").style.transition = "0.25s ease-out";
+}
+
 function aigaOver() {
   document.getElementById("aiga").style.cursor = "pointer";
   document.getElementById("aiga").style.background = "#80CF91";
