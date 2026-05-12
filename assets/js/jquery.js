@@ -45,10 +45,14 @@ $(document).ready(function() {
 
     $("#em").click(function () {
         window.location.replace("em.html")
-    })
+    });
 
-    $("#lg").click(function () {
-        window.location.replace("lg.html")
+    $("#cpas").click(function () {
+        window.location.replace("collab-ads.html")
+    });
+
+    $("#cv").click(function () {
+        window.location.replace("cv.html")
     });
 
     //INITIALIZING MASONRY AND PACKERY LIBRARIES
