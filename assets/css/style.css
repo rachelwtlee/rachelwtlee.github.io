@@ -526,7 +526,7 @@ iframe {
 #cv .featureImg1 {
     grid-column: 1 / 6;
     grid-row: 2;
-    margin-top:-18em;
+    margin-top: -5em;
     margin-bottom: 0em;
     position: relative;
 }
@@ -541,7 +541,7 @@ iframe {
 
 
 #aiga .featureImg2 {
-    margin-top: -14em;
+    margin-top: -4em;
 }
 
 /* FLICKITY CAROUSEL*/
