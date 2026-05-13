@@ -416,7 +416,7 @@ img {
 .projectIntroGrid {
   grid-template-areas:
     "title title title title title title title title"
-    "skills skills timeframe timeframe collaborators collaborators role role"
+    "skills skills role role collaborators collaborators timeframe timeframe"
     ". . summary summary summary summary . ."
     ". . overview overview overview overview . .";
 }
@@ -592,9 +592,9 @@ path.arrow {
   .rightContainer {margin-left: 30vw;}
   #intro {padding-right: 1.5em;}
   #skills {grid-column: 1 / 5; grid-row: 2; padding-bottom: 1.5em;}
-  #timeframe { grid-column: 5 / 9; grid-row: 2; padding-bottom: 1.5em;}
+  #role { grid-column: 5 / 9; grid-row: 2; padding-bottom: 1.5em;}
   #collaborators { grid-column: 1 / 5; grid-row: 3;}
-  #role {grid-column: 5 / 9; grid-row: 3;}
+  #timeframe {grid-column: 5 / 9; grid-row: 3;}
   #summary { grid-row: 4; padding-top: 3em;}
   #overview { grid-row: 5;}
   .projectIntroGrid {padding-bottom: 1.5em;}
@@ -643,11 +643,11 @@ path.arrow {
 
   /* Project pages: consistent padding, all content full width */
   .projectIntroGrid, .projectContent {padding: 0 2em 2em 2em;}
-  /* Metadata: single-column stacked — Skills → Team → Timeframe → Role */
+  /* Metadata: single-column stacked — Skills → Role → Team → Timeframe */
   #skills {grid-column: 1 / 9; grid-row: 2; padding-bottom: 1.5em;}
-  #collaborators {grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em;}
-  #timeframe {grid-column: 1 / 9; grid-row: 4; padding-bottom: 1.5em;}
-  #role {grid-column: 1 / 9; grid-row: 5; padding-bottom: 1.5em;}
+  #role {grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em;}
+  #collaborators {grid-column: 1 / 9; grid-row: 4; padding-bottom: 1.5em;}
+  #timeframe {grid-column: 1 / 9; grid-row: 5; padding-bottom: 1.5em;}
   #summary {grid-column: 1 / 9; grid-row: 6; padding-top: 1.5em;}
   #overview {grid-column: 1 / 9; grid-row: 7;}
   .projectHeading {margin-top: 2rem;}
