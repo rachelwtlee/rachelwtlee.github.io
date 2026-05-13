@@ -236,24 +236,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var noteId = el.dataset.note || 'superContent1';
     var note = document.getElementById(noteId);
     if (note) {
-      var numEl     = document.getElementById('featureNumber');
-      var titleEl   = document.getElementById('featureTitle');
-      var summaryEl = document.getElementById('featureSummary');
-
-      trigger.addEventListener('mouseenter', function() {
-        note.style.opacity = '1';
-        note.style.visibility = 'visible';
-        if (numEl)     numEl.style.opacity = '0';
-        if (titleEl)   titleEl.style.opacity = '0';
-        if (summaryEl) summaryEl.style.opacity = '0';
-      });
-      trigger.addEventListener('mouseleave', function() {
-        note.style.opacity = '0';
-        note.style.visibility = 'hidden';
-        if (numEl)     numEl.style.opacity = '1';
-        if (titleEl)   titleEl.style.opacity = '1';
-        if (summaryEl) summaryEl.style.opacity = '1';
-      });
+      $(trigger).on('mouseenter', function() { $(note).stop(true, true).fadeIn(300); });
+      $(trigger).on('mouseleave', function() { $(note).stop(true, true).hide(); });
     }
   });
 
