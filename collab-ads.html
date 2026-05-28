@@ -85,42 +85,56 @@
 
             <h1 id="summary">A two-phase redesign where earning retailer trust through friction fixes made a larger structural change possible.</h1>
             <div id="overview">
-              <p class="paragraphBottom"><a href="https://en-gb.facebook.com/business/tools/collaborative-ads" target="_blank"><span class="colorChange bodyLink">Collaborative Ads ↗</span></a> lets brands run ads that direct buyers to their product pages on a their retailer's website or app. Before a brand can run any ads, they go through a joint onboarding process with their retailer, and that process was broken in ways neither side could easily fix. Most brands discovered the product only when a retailer personally reached them, waited weeks for manual review, and still weren't set up to run their first ad by the end of it.</p>
-              <p class="paragraphBottom">This was a two-phase project. Phase 1 fixed the friction points breaking the existing process. Phase 2 rebuilt it from scratch and gave brands the ability to onboard themselves for the first time.</p>
+              <p class="paragraphBottom"><a href="https://en-gb.facebook.com/business/tools/collaborative-ads" target="_blank"><span class="colorChange bodyLink">Collaborative Ads ↗</span></a> lets brands run ads that direct buyers to their product pages on a retailer's website or app. Before any ads can run, retailers must send brands a collaboration request, and brands need to accept it to onboard. That process was broken in ways neither side could easily fix. Most brands discovered the product only when a retailer personally reached out, waited weeks for manual review, and still weren't set up to run their first ad at the end of it.</p>
+              <p class="paragraphBottom">This was a two-phase project. Phase 1 resolved key pieces of friction breaking the existing process. Phase 2 reimagined onboarding by removing structural bottlenecks, giving brands the ability to onboard themselves for the first time.</p>
               <h2>This project is under NDA. Screens shown here have shipped publicly. Full case study is available on request.</h2>
             </div>
           </section>
           <section class="projectContent">
             <h5 class="projectHeading">Phase 1: Friction fixes</h5>
-            <p class="projectText paragraphBottom">I joined the team when a solution was already scoped. After running a UX audit and reviewing research, I reframed the scope around the gaps that were actually breaking the experience and got leadership buy-in to change build direction. In this phase, we shipped improvements to notifications, permissions assignment and collaboration term enforcement. Highlights shown below:</p>
+            <p class="projectText paragraphBottom">I joined the team when a solution was already scoped. Before any build work began, I audited the existing experience end-to-end, covering both how retailers create collaboration invitations and how brands accept them, reviewed the findings against existing research, and reframed the scope around the highest impact fixes that could resolve friction within our timeframe. I got leadership buy-in to change direction. A few highlights:</p>
             
             <!-- Highlights -->
+            <h1 class="deliverablesHeading2">Collaboration terms enforced end-to-end</h1>
+            <div class="deliverablesImg3"><img src="assets/images/collab-ads/set-up-terms.PNG"></img></div>
+            <p class="deliverablesText1">Previously, retailers had no way to enforce their own collaboration requirements: they'd send an invitation to a brand and manually follow up to verify compliance. Terms are now configurable when they create a collaboration invitation.</p>
+            <div class="deliverablesImg1"><img src="assets/images/collab-ads/invitation-enforced.png"></img></div>
+            <p class="deliverablesText3">When brands accept the invitation, terms surface as conditions of acceptance. </p>
+
             <h1 class="deliverablesHeading1">Automate where safe, hold where it matters</h1>
             <div class="deliverablesImg2"><img src="assets/images/collab-ads/ad-account-permissions.PNG"></img></div>
-            <p class="deliverablesText2">Ad account permissions stay manually assigned because they carry spend and billing access.</p>
+            <p class="deliverablesText2">Ad account permissions assignment stays manual because they involve access to spend and billing.</p>
             <div class="deliverablesImg2"><img src="assets/images/collab-ads/catalog-permissions.PNG"></img></div>
-            <p class="deliverablesText2">Catalog segment permissions, which let a brand's team use retailer products in ads, are <span id="super"><span class="inlineSuperscript">auto-granted to anyone with ad account access.<span class="superscript" id="superSmall" data-note="superContent1">1</span></span></span></p>
+            <p class="deliverablesText2">Catalog segment permissions, which let a brand's team use retailer products in ads, are <span id="super"><span class="inlineSuperscript">auto-granted to anyone with ad account access, so the people running ads aren't blocked from showcasing products during ad creation.<span class="superscript" id="superSmall" data-note="superContent1">1</span></span></span></p>
+            
+            <!-- Phase 1 Outcomes -->
+          <h5 class="projectHeading">Phase 1 Outcomes</h5>
+          <p class="projectText paragraphBottom">Phase 1 meaningfully exceeded its onboarding completion goal and generated immediate revenue impact at launch. Retailers responded by investing more in promoting Collaborative Ads to new brands, a direct result of the reduced friction and the trust built along the way.</p>
             
             <h5 class="projectHeading">Phase 2: Brand initiated onboarding</h5>
-            <p class="projectText paragraphBottom">In this phase, I led the vision to restructure onboarding to be brand-initiated, removing the retailer as the middle man to remove structural bottlenecks that were limiting new brand acquisition. I <span id="super"><span class="inlineSuperscript">co-pitched the concept to our top retailer partners<span class="superscript" id="superSmall" data-note="superContent2">2</span></span></span> to validate the idea and define scope. Post-feedback, I designed and shipped a fully self-serve experience, from discovery to first ad, for brands collaborating with those retailers. Highlights shown below:</p>
+            <p class="projectText paragraphBottom">While Phase 1 resolved key pieces of friction, structural bottlenecks remained. Most brands still depended on retailers to discover Collaborative Ads, waited weeks for a manual invitation, and a significant share who completed setup never ran an ad. I led the design vision and co-led product strategy with my PM. Together, we <span id="super"><span class="inlineSuperscript">pitched a concept to our top retailer partners<span class="superscript" id="superSmall" data-note="superContent2">2</span></span></span> : giving brands a direct, self-serve path for the first time. While all partners had the appetite, few could commit the engineering resources. So we redesigned the solution around surfaces we owned, delivering the same structural unlock without requiring retailers to build anything. A few highlights:</p>
 
-            <h1 class="deliverablesHeading2">One entry point for all brands</h1>
+            <h1 class="deliverablesHeading2">One entrypoint for all brands</h1>
             <div class="deliverablesImg3"><img src="assets/images/collab-ads/form-full.gif"></img></div>
             <p class="deliverablesText1">Brands select their retailer upfront, and the form adapts from there. Routes to either a self-serve flow or a collaboration request depending 
               on the retailer. The same entry point works for brands, or anyone acting on the brand's behalf.</p>
 
+            <h1 class="deliverablesHeading1">Real-time verification</h1>
+            <div class="deliverablesImg1"><img src="assets/images/collab-ads/verify-url.gif"></img></div>
+            <p class="deliverablesText4">As brands type their Shop URL, Meta validates the collaboration instantly. If there's a match, brands can continue setup, removing back and forth with the retailer. Every brand has a Shop URL, so nothing extra is needed to get started.</p>
+              
             <h1 class="deliverablesHeading3">A direct path to the first ad</h1>
             <div class="deliverablesImg3"><img src="assets/images/collab-ads/run-ads.GIF"></img></div>
             <p class="deliverablesText3">Once setup is complete, brands land on a new Overview tab with a direct entry point to run a Collaborative Ads campaign with defaults applied. 
               Next steps surface pending actions and best practices so nothing gets missed.</p>
 
-          <!-- Outcomes -->
-          <h5 class="projectHeading">Outcomes</h5>
-          <p class="projectText paragraphBottom">Phase 1 exceeded its onboarding completion goal. Phase 2 exceeded its daily revenue goal at launch. More importantly, our largest retailer partner removed eligibility gating and made Collaborative Ads available to all brands on their platform due to reduced manual effort to onboard brands.</p>
+          <!-- Phase 2 Outcomes -->
+          <h5 class="projectHeading">Phase 2: Outcomes</h5>
+          <p class="projectText paragraphBottom">Phase 2 significantly exceeded its daily revenue goal at launch and onboarded thousands of brands in the first weeks. Most significantly, our largest retailer partner removed eligibility gating entirely, making Collaborative Ads available to every brand selling on their platform for the first time.</p>
 
           <!-- Key Takeaway -->
           <h5 class="projectHeading">Key Takeaway</h5>
-          <p class="projectText paragraphBottom">Phase 1 wasn't just friction fixes. It was about earning the credibility to ask for something structurally different. Trust is the precondition for structural change.</p>
+          <p class="projectText paragraphBottom">Big structural change requires trust to be earned. Phase 1 wasn't just about resolving friction, it was the foundation that made a larger ask possible.</p>
       </section>
     </main>
   </body>
