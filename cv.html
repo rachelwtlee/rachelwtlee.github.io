@@ -13,7 +13,7 @@
         <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery-3.4.0.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=7">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=10">
         <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
         <script type="text/javascript" src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/script.js?v=10"></script>
@@ -80,39 +80,56 @@
 
             <h1 id="summary">0 → 1 foundational infrastructure giving advertisers direct control over how their product data appears in ads, for every objective.</h1>
             <div id="overview">
-              <p class="paragraphBottom">Advertisers upload their products to <a href="https://www.facebook.com/business/tools/shopping-catalog?ref=search_new_1" target="_blank"><span class="colorChange bodyLink">Meta's catalog ↗</span></a>, a database of everything they sell including products with images, titles and prices.
-                That data powers every ad and storefront on Facebook and Instagram. Sophisticated advertisers use multiple sources to keep it current: a platform like Shopify for live prices and stock, and a data feed for ad-optimised titles and images. When two sources set a different value for the same attribute, Meta has 
-                to pick one. Before this project, advertisers had no say in that decision.</p>
-              <p class="paragraphBottom">The problem showed up differently depending on who you talked to. One group maintained a single catalog but couldn't control which source won for each attribute, so their products showed up wrong across different placements. Another group worked around the lack of control by duplicating 
-                their entire catalog: one for their Shop, one for ads, one per region. Each new catalog allowed for creative control, but came at the cost of ads performance.</p>
-              <p class="paragraphBottom">This was a two-part solution. Configure Sources gave advertisers control over which data source set each product attribute. Product Data Versions let them create alternate representations of their products for different marketing objectives.</p>
+              <p class="paragraphBottom">Meta's <a href="https://www.facebook.com/business/tools/shopping-catalog?ref=search_new_1" target="_blank"><span class="colorChange bodyLink">product catalog ↗</span></a>is the engine behind ads and commerce on Facebook and Instagram. Advertisers upload their products, with information like titles, images, prices, and Meta uses that data to power the ads and storefronts buyers see.</p>
+              <p class="paragraphBottom">Most sophisticated advertisers use multiple data sources, like a Shopify connection, a data feed, to keep that data accurate. When two sources disagree on the same attribute, Meta decides which one wins. Before this project, advertisers had no say in that decision.</p>
+              <p class="paragraphBottom">This problem affected two cohorts differently. The first needed one consistent version of each product but had no control over which source won when they conflicted. The second needed products to look different depending on the objective, but their only option was maintaining a separate catalog per objective, which was more overhead, and worse for ads performance.</p>
+              <p class="paragraphBottom">Both groups wanted control over how their products appeared to buyers, but neither had it.</p>
               <h2>This project is under NDA. Screens shown here have shipped publicly. Full case study is available on request.</h2>
             </div>
           </section>
           <section class="projectContent">
             <h5 class="projectHeading">Phase 1: Configure Sources</h5>
-            <p class="projectText paragraphBottom">I co-led research and project scoping, and designed a solution to manage data sources with a transparency-first approach: showing advertisers which data source was winning for each attribute before asking them to make any decisions about it. Highlights shown below:</p>
-            
-            <!-- Highlights -->
-            <h1 class="deliverablesHeading3">See what's winning</h1>
-            <div class="deliverablesImg4"><img src="assets/images/cv/see-priority.png"></img></div>
-            <p class="deliverablesText4">Attributes updated by multiple data sources are surfaced first. Advertisers can see which source is setting each value, like price, image, title, before making any changes.</p>
-            
-            <h1 class="deliverablesHeading3">Then change it</h1>
-            <div class="deliverablesImg1"><img src="assets/images/cv/reprioritise.gif"></img></div>
-            <p class="deliverablesText1">Advertisers reprioritise by dragging sources into order. Meta's default is visible and overridable, but at least one source must always be set so buyers never see wrong information that looses their trust.</p>
-            
-            <h5 class="projectHeading">Phase 2: Product Data Versions</h5>
-            <p class="projectText paragraphBottom">I led the project from Alpha to Beta launch. Notably, I co-authored a technical behaviour proposal with engineering to establish the right data model before any interface work began, and built a design vision that became the roadmap for 5 product teams. In addition to designing, I was deeply involved in advertiser recruitment, research, and go-to-market preparation.</p>
+            <div class="projectText paragraphBottom">
+              <p>Configure Sources gave advertisers what they were missing: visibility into which source was winning for each attribute, and the controls to change it.</p>
+              <p class="paragraphContinue">I co-led scoping and foundational research to establish what the feature needed to do, then led design through to launch. Some highlights:</p>
+            </div>
 
-          <!-- Outcomes -->
-          <h5 class="projectHeading">Outcomes</h5>
-          <p class="projectText">Configure Sources exceeded its resolution goal and opened new revenue opportunities for advertisers who previously couldn't use catalog-powered ads. Product Data Versions launched to Beta, and earned a GA recommendation with strong advertiser satisfaction and significant <span id="super"><span class="inlineSuperscript">ROAS improvements<span class="superscript" id="superSmall">1</span></span></span> reported across exit interviews.</p>
+            <!-- Highlights -->
+            <h1 class="deliverablesHeading3">Discover what's in conflict, then change who wins</h1>
+            <div class="deliverablesImg4"><img src="assets/images/cv/see-priority.png"></img></div>
+            <p class="deliverablesText4">Attributes where sources are setting different values are surfaced first, ordered by how consequential they are. For example, a price conflict matters more than a description conflict. From there, advertisers drag to reprioritise, changing which source wins for any attribute.</p>
+            
+            <h1 class="deliverablesHeading3">Meta's default made visible (and overridable)</h1>
+            <div class="deliverablesImg1"><img src="assets/images/cv/reprioritise.gif"></img></div>
+            <p class="deliverablesText1">For attributes like price and stock, where wrong information has the highest downstream impact, Meta's automatically chosen source is clear. Advertisers can override it, but at least one source must always be set to ensure buyers always see consistent information.</p>
+
+          <!-- Configure Sources Outcomes -->
+          <h5 class="projectHeading">Configure Sources: Outcomes</h5>
+          <p class="projectText">Configure Sources exceeded every goal. It resolved a significant backlog of advertiser friction, unblocked a large category of advertisers who couldn't onboard without source-level control, and saved years of engineering on-call time. </p>
           <h2 class="projectText">"The greatest product update from Meta I’ve seen all year." — Director of Marketing, Beauty Group</h2>
+          
+          <!-- PDV -->
+          <h5 class="projectHeading">Phase 2: Product Data Versions</h5>
+          <p class="projectText">Configure Sources solved the first problem. But advertisers who needed products to look different across objectives still had no solution. Product Data Versions closed that gap by letting advertisers create alternate versions of their product information within a single catalog, without changing the default.</p>
+          <p class="projectText paragraphContinue paragraphBottom">I led design from alpha to beta. I co-authored a technical behaviour proposal with engineering to establish the right data model, and built a design vision grounded in what advertisers told us wasn't working. Together they became the roadmap for five teams. Some highlights:</p>
+
+           <!-- Highlights -->
+            <h1 class="deliverablesHeading1">Create a version without changing the default</h1>
+            <div class="deliverablesImg2"><img src="assets/images/cv/create-version.png"></img></div>
+            <p class="deliverablesText4">Advertisers choose which data sources power the version, so products can look different for a specific objective without affecting how they appear anywhere else.</p>
+            
+            <h1 class="deliverablesHeading1">Validate products before running ads</h1>
+            <div class="deliverablesImg3"><img src="assets/images/cv/view-versions.PNG"></img></div>
+            <p class="deliverablesText3">Advertisers can validate that version data uploaded correctly, that version information is applied to the right products, and that the ad looks right before anything goes live.</p>
+
+          
+          <!-- PDV Outcomes -->
+          <h5 class="projectHeading">Product Data Versions: Outcomes</h5>
+          <p class="projectText">Product Data Versions launched to Beta, generated strong advertiser satisfaction and significant <span id="super"><span class="inlineSuperscript">ROAS improvements<span class="superscript" id="superSmall">1</span></span></span> reported across exit interviews, and is now being built for General Availability.</p>
 
           <!-- Key Takeaway -->
           <h5 class="projectHeading">Key Takeaway</h5>
-          <p class="projectText paragraphBottom">Design's job isn't just to make things look right. It's to make sure the right thinking is in the room before anything is built.</p>
+          <p class="projectText paragraphBottom">Design's job isn't just to make things look right. It's to make sure the thinking behind the product is as considered as the product itself.</p>
       </section>
     </main>
   </body>
