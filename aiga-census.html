@@ -13,10 +13,51 @@
         <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery-3.4.0.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=7">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=11">
         <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <script type="text/javascript" src="assets/js/script.js?v=10"></script>
+        <style>
+          body .projectIntroGrid {
+            padding: 0 6em 0em 6em;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-areas:
+              "title title title title title title title title"
+              "summary summary summary summary summary summary summary summary"
+              "contributions contributions contributions contributions contributions contributions contributions contributions"
+              "role role collaborators collaborators timeframe timeframe . ."
+              "overview overview overview overview overview overview overview overview";
+          }
+          #contributions { grid-area: contributions; }
+          #summary { padding-top: 0; }
+          #role, #collaborators, #timeframe { padding-bottom: 2em; }
+
+          @media (max-width: 1024px) {
+            body .projectIntroGrid { padding: 0 2em 0 2em; }
+            #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
+            #role          { grid-column: 1 / 5; grid-row: 4; }
+            #collaborators { grid-column: 5 / 9; grid-row: 4; }
+            #timeframe     { grid-column: 1 / 5; grid-row: 5; }
+            #summary       { grid-row: 2; }
+            #overview      { grid-row: 6; }
+          }
+
+          @media (max-width: 768px) {
+            body .projectIntroGrid { padding: 0 2em 0 2em; }
+            #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
+            #role          { grid-column: 1 / 9; grid-row: 4; }
+            #collaborators { grid-column: 1 / 9; grid-row: 5; }
+            #timeframe     { grid-column: 1 / 9; grid-row: 6; }
+            #summary       { grid-column: 1 / 9; grid-row: 2; }
+            #overview      { grid-column: 1 / 9; grid-row: 7; }
+          }
+
+          @media (max-width: 504px) {
+            body .projectIntroGrid { padding: 0 1.5em 1.5em 1.5em; }
+          }
+        </style>
+        <script type="text/javascript" src="assets/js/jquery.js?v=2"></script>
+        <script type="text/javascript" src="assets/js/script.js?v=12"></script>
     </head>
 
     <header>
@@ -35,8 +76,8 @@
       <!-- LEFT CONTAINER -->
         <main class="leftContainer">
             <div class="leftContent">
-              <h4 id="featureNumber">03</h4><h3 class="paragraphBottom" id="featureTitle" >AIGA Design Census</h3>
-              <h2 id="featureSummary">An interactive library of census stories visualizing the most critical issues facing design today.</h2>
+              <h4 id="featureNumber">03</h4><h3 id="featureTitle" >AIGA Design Census</h3>
+              <h2 class="paragraphContinue" id="featureSummary">An interactive library of census stories visualizing the most critical issues facing design today.</h2>
             </div>
             <!-- superscript -->
             <div class="leftContent leftImg" id="superContent1">
@@ -61,36 +102,34 @@
           <div class="projectCoverImg"><img src="assets/images/home/AIGA-Web.png"></div>
           <section class="projectIntroGrid">
             <h5 id="title">AIGA Design Census</h5>
-            <div id="skills">
-              <h3>Skills<h3>
-              <h4>Data Visualization</h4>
-              <h4>Print</h4>
-              <h4>Web</h4>
-              <h4>HTML / CSS / js</h4>
-              <h4>Interaction Design</h4>
+            <h1 id="summary">An interactive library of census stories visualizing the most critical issues facing design today.</h1>
+            <div id="contributions">
+              <h3 class="blockHeading">Key contributions</h3>
+              <ul class="blockText paragraphBottom">
+                <li>Concept development and creative direction for the interactive library experience</li>
+                <li>Interaction and experience design across web and print</li>
+                <li>Full-stack web development using JavaScript, Python (NLTK), and HTML/CSS</li>
+              </ul>
             </div>
             <div id="role">
-              <h3>Role<h3>
-              <h4>Concept Development</h4>
-              <h4>Interaction Design</h4>
-              <h4>Web Development</h4>
+              <h3>Role</h3>
+              <h4>Print and Web Designer, Web Developer</h4>
             </div>
             <div id="collaborators">
-              <h3>Team<h3>
-              <h4>Jaclyn Saik</h4>
-              <h4>Alice Fang</h4>
+              <h3>Team</h3>
+              <h4>Jaclyn Saik, Alice Fang</h4>
             </div>
             <div id="timeframe">
-              <h3>Timeframe<h3>
-              <h4>Spring 2020</h4>
+              <h3>Timeframe</h3>
               <h4>5 weeks</h4>
             </div>
-            <h1 id="summary">An interactive library of census stories visualizing the most critical issues facing design today.</h1>
             <div id="overview">
-              <p class="paragraphBottom">Every few years, AIGA releases a <a href="https://designcensus.org/" target="_blank"><span class="colorChange bodyLink">census report ↗</span></a>
-              that highlights the state of design and those involved in the industry, using metrics such as demographics, job satisfaction, and future outlook of the industry.</p><p>My team decided to focus on the only subset of the
-              census with a free response option, <span id=”super”><span class=”inlineSuperscript”>”What are the most critical issues facing design?”<span class=”superscript” id=”superSmall”>1</span></span></span> to tell the personal stories of designers through language and sentiment.</p>
+              <hr class="sectionDivider">
+              <p>Every few years, AIGA releases a <a href="https://eyeondesign.aiga.org/category/designcensus/" target="_blank"><span class="colorChange bodyLink">census report ↗</span></a>
+              that highlights the state of design and those involved in the industry, using metrics such as demographics, job satisfaction, and future outlook of the industry. My team decided to focus on the only subset of the
+              census with a free response option, <span class="inlineSuperscript">“What are the most critical issues facing design?”<span class="superscript" id="superSmall" data-note="superContent1">1</span></span> to tell the personal stories of designers through language and sentiment.</p>
             </div>
+            <hr class="sectionDivider">
           </section>
           <section class="projectContent">
             <h5 class="projectHeading">Exploratory Site</h5>
@@ -129,7 +168,7 @@
                 <div class="gridItem"><img src="assets/images/aiga/green.jpg"></div>
                 <div class="gridItem w3"><img src="assets/images/aiga/flip.gif"></div>
             </div>
-
+          <hr class="sectionDivider">
            <!-- Parsing Data -->
             <h5 class="projectHeading">Parsing Data</h5>
             <p class="projectText">Using Python and NLTK to parse through census data, we identified the 150 bi-grams and tri-grams that appear most
@@ -197,7 +236,7 @@
             ambitious web project to date, my first time working with these two amazing collaborators. Through this process, we were able to challenge
             ourselves to look into the affordances of different mediums, be ambitious with our craft, learn plenty about parsing data and create compelling
             narratives to tell untold stories.</p>
-          <p class="projectText">In the future, I would like to explore ways in which the user’s personal narratives can be weaved into our database, be it
+          <p class="projectText paragraphContinue paragraphBottom">In the future, I would like to explore ways in which the user’s personal narratives can be weaved into our database, be it
             through allowing users to bookmark selections, annotate, or replying to tangents, to transform our dataset into something continuous and in flux.</p>
       </section>
     </main>

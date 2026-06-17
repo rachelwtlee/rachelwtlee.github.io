@@ -4,17 +4,7 @@ $(document).ready(function() {
         $(".leftContent").toggleClass("hide");
     })
 
-    $("#super").hover(function() {
-        $("#superContent1").toggleClass("show");
-        $(".leftContent").toggleClass("hide");
-    })
-
-    $("#super2").hover(function() {
-        $("#superContent2").toggleClass("show");
-        $(".leftContent").toggleClass("hide");
-    })
-
-    //Image zoom on hover
+//Image zoom on hover
     $(".imgOver").hover(function() {
         $(".over").toggleClass("zoom");
     })

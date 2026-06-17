@@ -1,5 +1,5 @@
 /* Easter egg accent palette — each link and superscript gets its own random color */
-var ACCENT_COLORS = ['#2266CA', '#6C4DEB', '#F9C151', '#8868AD', '#F5550E'];
+var ACCENT_COLORS = ['#2266CA', '#6C4DEB', '#3BA8A0', '#8868AD', '#F5550E'];
 
 function randomAccent() {
   return ACCENT_COLORS[Math.floor(Math.random() * ACCENT_COLORS.length)];
