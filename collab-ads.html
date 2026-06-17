@@ -15,6 +15,43 @@
 
         <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=7">
         <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+        <style>
+          body .projectIntroGrid {
+            padding: 0 6em 0em 6em;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-areas:
+              "title title title title title title title title"
+              "summary summary summary summary summary summary summary summary"
+              "contributions contributions contributions contributions contributions contributions contributions contributions"
+              "role role collaborators collaborators timeframe timeframe . ."
+              "overview overview overview overview overview overview overview overview";
+          }
+          #contributions { grid-area: contributions; }
+          #summary { padding-top: 0; }
+          #role, #collaborators, #timeframe { padding-bottom: 2em; }
+
+          /* iPad Pro (max-width: 1024px) — shift all rows down by 1 to make room for contributions */
+          @media (max-width: 1024px) {
+            #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
+            #role          { grid-column: 5 / 9; grid-row: 4; }
+            #collaborators { grid-column: 1 / 5; grid-row: 5; }
+            #timeframe     { grid-column: 5 / 9; grid-row: 5; }
+            #summary       { grid-row: 2; }
+            #overview      { grid-row: 6; }
+          }
+
+          /* Tablet / mobile (max-width: 768px) — single column stack */
+          @media (max-width: 768px) {
+            #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
+            #role          { grid-column: 1 / 9; grid-row: 4; }
+            #collaborators { grid-column: 1 / 9; grid-row: 5; }
+            #timeframe     { grid-column: 1 / 9; grid-row: 6; }
+            #summary       { grid-column: 1 / 9; grid-row: 2; }
+            #overview      { grid-column: 1 / 9; grid-row: 7; }
+          }
+        </style>
         <script type="text/javascript" src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/script.js?v=10"></script>
     </head>
@@ -35,19 +72,19 @@
       <!-- LEFT CONTAINER -->
         <main class="leftContainer">
             <div class="leftContent">
-              <h4 id="featureNumber">01</h4><h3 class="paragraphBottom" id="featureTitle" >Collaborative Ads Brand Onboarding</h3>
-              <h2 id="featureSummary">A two-phase redesign where earning retailer trust through friction fixes made a larger structural change possible.</h2>
+              <h4 id="featureNumber">01</h4><h3 id="featureTitle" >Collaborative Ads Brand Onboarding</h3>
+              <h2 class="paragraphContinue" id="featureSummary">A two-phase redesign where earning retailer trust through friction fixes made a larger structural change possible.</h2>
             </div>
             <!-- superscript -->
             <div class="leftContent leftImg" id="superContent1">
-              <h3>1</h3><h4>We validated this concept as 'low risk' with retailer success representatives before shipping.</h4>
+              <h3>1</h3><h4>We validated this as low risk: brands can use products from a catalog segment in ads, but can't edit them.</h4>
             </div>
             <div class="leftContent leftImg" id="superContent2">
               <h3>2</h3><h4>Spoiler alert: they all loved the concept but couldn't commit for various reasons, so we had many rounds of iteration and feedback.</h4>
             </div>
             <div class="leftContent leftImg" id="nextProject">
-              <img class="paragraphBottom" src="assets/images/home/CV-1.gif">
-              <h3 class="paragraphBottom"><a href="cv.html"><span class="colorChange">Next: Catalog Data Controls</span></a></h3>
+              <img src="assets/images/home/CV-1.gif">
+              <h3 class="paragraphContinue"><a href="cv.html"><span class="colorChange">Next: Catalog Data Controls</span></a></h3>
             </div>
             <div id="leftFooter">
               <h4>Rachel Lee © 2026</h4>
@@ -59,85 +96,123 @@
           <div class="projectCoverImg"><img src="assets/images/collab-ads/CPAS Cover.png"></div>
           <section class="projectIntroGrid">
             <h5 id="title">Collaborative Ads Brand Onboarding</h5>
-            <div id="skills">
-              <h3>Skills<h3>
-              <h4>Product Design</h4>
-              <h4>Design Vision</h4>
-              <h4>Systems Thinking</h4>
-              <h4>Cross-functional alignment</h4>
+            <h1 id="summary">A two-phase redesign where earning retailer trust through friction fixes made a larger structural change possible.</h1>
+            <div id="contributions">
+              <h3 class="blockHeading">Key contributions</h3>
+              <ul class="blockText paragraphBottom">
+                <li>Redirected Phase 1 before build began. Ran a UX audit, reframed scope around the highest-friction gaps, and got leadership aligned to change direction</li>
+                <li>Consolidated seven independently scoped initiatives into a single workstream and secured investment for Phase 2 through Design and Product Reviews</li>
+                <li>Defined the vision for self-serve Collaborative Ads onboarding and co-developed the strategy with PM and engineering</li>
+                <li>Co-presented onboarding concepts directly to retailer partners and used partner feedback to reshape the implementation strategy</li>
+                <li>Led design execution across onboarding improvements and the new self-serve experience</li>
+              </ul>
             </div>
             <div id="role">
-              <h3>Role<h3>
+              <h3>Role</h3>
               <h4>Lead Product Designer</h4>
             </div>
             <div id="collaborators">
-              <h3>Team<h3>
-              <h4>1.25 Content Designer</h4>
-              <h4>1 Product Manager</h4>
-              <h4>9 Engineers</h4>
-              <h4>1 Data Scientist</h4>
-              <h4>1 Product Marketing Manager</h4>
+              <h3>Team</h3>
+              <h4>1.25 CD, 1 PM, 9 Eng, 1 DS, 1 PMM</h4>
             </div>
             <div id="timeframe">
-              <h3>Timeframe<h3>
-              <h4>May 2025 - April 2026</h4>
+              <h3>Timeframe</h3>
+              <h4>11 months</h4>
             </div>
-
-            <h1 id="summary">A two-phase redesign where earning retailer trust through friction fixes made a larger structural change possible.</h1>
             <div id="overview">
-              <p class="paragraphBottom"><a href="https://en-gb.facebook.com/business/tools/collaborative-ads" target="_blank"><span class="colorChange bodyLink">Collaborative Ads ↗</span></a> lets brands run ads that direct buyers to their product pages on a retailer's website or app. Three parties are involved: brands run the ads, retailers host the catalog and process the sale, Meta connects them. Before a brand can run any ads, a retailer has to send them a collaboration request, and that process was broken in ways neither side could easily fix on their own. Most brands discovered the product only when a retailer personally reached out, waited weeks for manual review, and still weren't set up to run their first ad by the end of it.</p>
+              <hr class="sectionDivider">
+              <p><a href="https://en-gb.facebook.com/business/tools/collaborative-ads" target="_blank"><span class="colorChange bodyLink">Collaborative Ads ↗</span></a> lets brands run ads that direct buyers to their product pages on a retailer's website or app. Three parties are involved: brands run the ads, retailers host the catalog and process the sale, Meta connects them. Before a brand can run any ads, a retailer has to send them a collaboration request, and that process was broken in ways neither side could easily fix on their own.</p>
+              <p class="paragraphContinue paragraphBottom">The deeper problem wasn't just friction. Onboarding was structurally dependent on retailer workflows: retailers initiated requests, managed reviews, and absorbed the operational cost of every new brand they onboarded. More brands meant more retailer work, which naturally incentivised partners to gate access and prioritise their largest advertisers. Most brands discovered the product only when a retailer personally reached out, waited weeks for manual review, and still weren't set up to run their first ad by the end of it.</p>
               <img src="assets/images/collab-ads/how-it-works.png" style="width: 100%; display: block; margin-bottom: 1.5rem;">
-              <p class="paragraphBottom">This was a two-phase project. Phase 1 resolved key pieces of friction breaking the existing process. Phase 2 reimagined onboarding by removing structural bottlenecks, giving brands the ability to onboard themselves for the first time.</p>
+              <p class="paragraphBottom">Retailers had spent years working around a product that hadn't kept pace with their needs. Before asking them to support a more ambitious onboarding model, we needed to demonstrate that we understood the problems they faced every day, and were willing to invest in fixing them. Phase 1 focused on rebuilding that confidence. Phase 2 used it to build something more ambitious.</p>
               <h2>This project is under NDA. Screens shown here have shipped publicly. Full case study is available on request.</h2>
             </div>
+            <hr class="sectionDivider">
+          </section>
+           <section class="projectContent">
+            <h5 class="projectHeading">Why onboarding mattered</h5>
+            <p class="projectText">Collaborative Ads had limited opportunities for product-led growth. Most performance improvements depended on broader ads infrastructure outside the team's control. Onboarding was different: increasing the number of brands using Collaborative Ads was the highest-leverage growth opportunity the team could directly influence, and new brand acquisition had been slowing for two years. That made onboarding the focal point for investment.</p>
+            <p class="projectText paragraphContinue paragraphBottom">Retailers had spent years working around a product that hadn't kept pace with their needs. Before asking them to support a more ambitious onboarding model, we needed to demonstrate that we understood the problems they faced every day and were willing to invest in fixing them. Phase 1 focused on rebuilding that confidence. Phase 2 used it to make a structural change.</p>
           </section>
           <section class="projectContent">
             <h5 class="projectHeading">Phase 1: Friction fixes</h5>
-            <p class="projectText paragraphBottom">I joined the team when a solution was already scoped. After running a UX audit and reviewing research, I paused the build, reframed the scope around the gaps that were actually breaking the experience, and got leadership aligned to change direction before any code was written. We shipped improvements to notifications, permissions assignment, and collaboration term enforcement. A few highlights:</p>
+            <p class="projectText paragraphBottom">I joined the team when a solution was already scoped. After running a UX audit and reviewing research, I paused the build, reframed the scope around the gaps that were actually breaking the experience, and got leadership aligned to change direction before any code was written. We shipped improvements to collaboration term enforcement, permissions assignment, and notifications.</p>
             <img src="assets/images/collab-ads/phase-1-overview.png" style="grid-column: 4 / 9; width: 100%; display: block; margin-bottom: 1.5rem;">
 
             <!-- Highlights -->
             <h1 class="deliverablesHeading2">Collaboration terms enforced end-to-end</h1>
             <div class="deliverablesImg3"><img src="assets/images/collab-ads/set-up-terms.PNG"></img></div>
-            <p class="deliverablesText1">Previously, retailers had no way to enforce their own collaboration requirements: they'd send an invitation to a brand and manually follow up to verify compliance. Terms are now configurable when they create a collaboration invitation.</p>
             <div class="deliverablesImg1"><img src="assets/images/collab-ads/invitation-enforced.png"></img></div>
-            <p class="deliverablesText3">When brands accept the invitation, terms surface as conditions of acceptance. </p>
 
             <h1 class="deliverablesHeading1">Automate where safe, hold where it matters</h1>
             <div class="deliverablesImg2"><img src="assets/images/collab-ads/ad-account-permissions.PNG"></img></div>
-            <p class="deliverablesText2">Ad account permissions assignment stays manual because they involve access to spend and billing.</p>
             <div class="deliverablesImg2"><img src="assets/images/collab-ads/catalog-permissions.PNG"></img></div>
-            <p class="deliverablesText2">Catalog segment permissions, which let a brand's team use retailer products in ads, are <span id="super"><span class="inlineSuperscript">auto-granted to anyone with ad account access, so the people running ads aren't blocked from showcasing products during ad creation.<span class="superscript" id="superSmall" data-note="superContent1">1</span></span></span></p>
+            <p class="deliverablesText2">Not all permissions carry the same risk. Ad account permissions, which involve access to spend and billing, stay manual. Catalog segment permissions, which let a brand's team use retailer products in ads, are <span id="super"><span class="inlineSuperscript">auto-granted to anyone with ad account access.<span class="superscript" id="superSmall" data-note="superContent1">1</span></span></span> The result is that the people responsible for running ads aren't blocked from accessing products the moment setup completes.</p>
             
             <!-- Phase 1 Outcomes -->
-          <h5 class="projectHeading">Phase 1 Outcomes</h5>
-          <p class="projectText paragraphBottom">Phase 1 meaningfully exceeded its onboarding completion goal. Retailers responded by investing more in promoting Collaborative Ads to new brands — a direct result of the reduced friction and the trust built along the way.</p>
+
+          <h1 class="projectHeading">Results</h1>
+          <div class="blockGroup">
+            <h3 class="blockHeading">Outcomes</h3>
+            <ul class="blockText">
+              <li>Onboarding completion rate increased by 13%</li>
+              <li>Reduced operational friction for retailers managing collaborations</li>
+              <li>Contributed to growth in new brands onboarding alongside launch go-to-market efforts</li>
+            </ul>
+
+            <h3 class="blockHeading paragraphContinue">What it unlocked</h3>
+            <ul class="blockText paragraphBottom">
+              <li>Retailers began actively promoting Collaborative Ads to brands selling with them</li>
+              <li>Created the trust required to pursue self-serve onboarding</li>
+              <li>Aligned product, GTM, and partner teams around onboarding as the primary growth lever</li>
+            </ul>
+          </div>
+
+          <hr class="sectionDivider">
             
             <h5 class="projectHeading">Phase 2: Brand initiated onboarding</h5>
-            <p class="projectText paragraphBottom">With retailer trust established, I led the vision to restructure onboarding as brand-initiated. I <span id="super"><span class="inlineSuperscript">validated the concept with key retailer partners,<span class="superscript" id="superSmall" data-note="superContent2">2</span></span></span> worked through the constraints their feedback surfaced, and designed a fully self-serve experience from discovery to first ad. The same entry point also routes brands to a collaboration request flow where self-serve isn't yet available. A few highlights:</p>
+            <p class="projectText">With retailer trust established, I led the vision to restructure onboarding as brand-initiated. Initial concepts required retailer engineering resources and retailer-owned infrastructure to implement. Through partner conversations, we learned that retailers loved the direction, but couldn't commit what the original approach required. That insight shifted the strategy: rather than building an onboarding model that depended on systems outside our control, we redesigned around surfaces Meta owned. Retailers maintained oversight over brand onboarding, but the operational burden was removed.</p>
+            <p class="projectText paragraphContinue paragraphBottom">The final model introduced two paths: a fully self-serve flow for brands whose retailers had launched the model, and a structured collaboration request flow for everyone else.</p>
             <img src="assets/images/collab-ads/phase-2-overview.png" style="grid-column: 4 / 9; width: 100%; display: block; margin-bottom: 1.5rem;">
 
             <h1 class="deliverablesHeading2">One entrypoint for all brands</h1>
             <div class="deliverablesImg3"><img src="assets/images/collab-ads/form-full.gif"></img></div>
-            <p class="deliverablesText1">Brands select their retailer upfront, and the form adapts from there. Routes to either a self-serve flow or a collaboration request depending 
-              on the retailer. The same entry point works for brands, or anyone acting on the brand's behalf.</p>
+            <p class="deliverablesText1">Not every retailer could support self-serve onboarding from day one, as making self-serve onboarding available requires bespoke engineering work per retailer. Rather than building separate entry points for different retailer paths, we designed a single form that routes based on retailer selection: self-serve where available, collaboration request where it isn't. The same entry point works for brands or anyone acting on the brand's behalf, including agencies, who manage the majority of Collaborative Ads campaigns.</p>
 
             <h1 class="deliverablesHeading1">Real-time verification</h1>
             <div class="deliverablesImg1"><img src="assets/images/collab-ads/verify-url.gif"></img></div>
-            <p class="deliverablesText4">As brands type their Shop URL, Meta validates the collaboration instantly. If there's a match, brands can continue setup, removing back and forth with the retailer. Every brand has a Shop URL, so nothing extra is needed to get started.</p>
+            <p class="deliverablesText4">Shop URL verification gave brands a way to prove their relationship with a retailer without requiring retailer involvement, turning a multi-week manual process into something that could happen in a single session. Every brand already has a shop URL, so nothing extra is needed to get started. The approach required a deliberate security tradeoff: we implemented compensating mitigations before shipping to ensure it could be done safely at scale.</p>
               
             <h1 class="deliverablesHeading3">A direct path to the first ad</h1>
             <div class="deliverablesImg3"><img src="assets/images/collab-ads/run-ads.GIF"></img></div>
-            <p class="deliverablesText3">Once setup is complete, brands land on a new Overview tab with a direct entry point to run a Collaborative Ads campaign with defaults applied. 
-              Next steps surface pending actions and best practices so nothing gets missed.</p>
+            <p class="deliverablesText3">
+
+36% of brands who completed onboarding never ran an ad. One hypothesis was that there was no clear path to ad creation after setup, the obvious next step. The Overview tab tests that hypothesis: a direct entry point to run a Collaborative Ads campaign with defaults applied, alongside any remaining setup actions, so the path forward is visible the moment setup is done.</p>
 
           <!-- Phase 2 Outcomes -->
-          <h5 class="projectHeading">Phase 2: Outcomes</h5>
-          <p class="projectText paragraphBottom">Phase 2 significantly exceeded its daily revenue goal at launch and onboarded thousands of brands in the first weeks. Our largest retailer partner removed eligibility gating entirely, making Collaborative Ads available to every brand selling on their platform for the first time.</p>
+           <h1 class="projectHeading">Results</h1>
+          <div class="blockGroup">
+            <h3 class="blockHeading">Outcomes</h3>
+            <ul class="blockText">
+              <li>Self-serve onboarding launched with one major retailer partner, with two more implementing the model, together representing a significant share of product revenue</li>
+              <li>Exceeded the daily revenue goal by ~37%</li>
+              <li>Onboarded thousands of new brands in the first weeks post-launch</li>
+            </ul>
+
+            <h3 class="blockHeading paragraphContinue">What it unlocked</h3>
+            <ul class="blockText paragraphBottom">
+              <li>Gave retailers a reason to open Collaborative Ads to more brands, as onboarding no longer required proportional effort on their side</li>
+              <li>Our largest retailer made Collaborative Ads available to every brand on their platform for the first time, something the manual overhead had previously made unworkable</li>
+              <li>Created a path for brands to onboard and start advertising without needing retailer involvement</li>
+              <li>Set up the next phase of investment in brand activation and self-serve growth</li>
+            </ul>
+          </div>
+
+          <hr class="sectionDivider">
 
           <!-- Key Takeaway -->
           <h5 class="projectHeading">Key Takeaway</h5>
-          <p class="projectText paragraphBottom">Big structural change requires trust to be earned. Phase 1 wasn't just about resolving friction, it was the foundation that made a larger ask possible.</p>
+          <p class="projectText paragraphBottom">Phase 1 wasn't just about fixing friction — it was the foundation that made a structural ask possible. Our top retailers extended Collaborative Ads to every brand on their platform because we'd already shown we understood their workflow. Trust isn't a soft outcome, it determines what you can build next.</p>
       </section>
     </main>
   </body>

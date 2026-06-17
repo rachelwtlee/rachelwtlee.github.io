@@ -15,6 +15,47 @@
 
         <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=10">
         <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+        <style>
+          body .projectIntroGrid {
+            padding: 0 6em 0em 6em;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-areas:
+              "title title title title title title title title"
+              "summary summary summary summary summary summary summary summary"
+              "contributions contributions contributions contributions contributions contributions contributions contributions"
+              "role role collaborators collaborators timeframe timeframe . ."
+              "overview overview overview overview overview overview overview overview";
+          }
+          #contributions { grid-area: contributions; }
+          #summary { padding-top: 0; }
+          #role, #collaborators, #timeframe { padding-bottom: 2em; }
+
+          @media (max-width: 1024px) {
+            body .projectIntroGrid { padding: 0 2em 0 2em; }
+            #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
+            #role          { grid-column: 1 / 5; grid-row: 4; }
+            #collaborators { grid-column: 5 / 9; grid-row: 4; }
+            #timeframe     { grid-column: 1 / 5; grid-row: 5; }
+            #summary       { grid-row: 2; }
+            #overview      { grid-row: 6; }
+          }
+
+          @media (max-width: 768px) {
+            body .projectIntroGrid { padding: 0 2em 0 2em; }
+            #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
+            #role          { grid-column: 1 / 9; grid-row: 4; }
+            #collaborators { grid-column: 1 / 9; grid-row: 5; }
+            #timeframe     { grid-column: 1 / 9; grid-row: 6; }
+            #summary       { grid-column: 1 / 9; grid-row: 2; }
+            #overview      { grid-column: 1 / 9; grid-row: 7; }
+          }
+
+          @media (max-width: 504px) {
+            body .projectIntroGrid { padding: 0 1.5em 1.5em 1.5em; }
+          }
+        </style>
         <script type="text/javascript" src="assets/js/jquery.js"></script>
         <script type="text/javascript" src="assets/js/script.js?v=10"></script>
     </head>
@@ -35,16 +76,16 @@
       <!-- LEFT CONTAINER -->
         <main class="leftContainer">
             <div class="leftContent">
-              <h4 id="featureNumber">01</h4><h3 class="paragraphBottom" id="featureTitle" >Catalog Data Controls</h3>
-              <h2 id="featureSummary">0 → 1 foundational infrastructure giving advertisers direct control over how their product data appears in ads, for every objective.</h2>
+              <h4 id="featureNumber">01</h4><h3 id="featureTitle" >Catalog Data Controls</h3>
+              <h2 class="paragraphContinue" id="featureSummary">0 → 1 foundational infrastructure giving advertisers direct control over how their product data appears in ads, for every objective.</h2>
             </div>
             <!-- superscript -->
             <div class="leftContent" id="superContent1">
               <h3>1</h3><h4> ROAS (Return on ad spend) — revenue earned per dollar spent on ads.</h4>
             </div>
             <div class="leftContent leftImg" id="nextProject">
-              <img class="paragraphBottom" src="assets/images/home/AIGA-Web.png">
-              <h3 class="paragraphBottom"><a href="aiga-census.html"><span class="colorChange">Next: AIGA Design Census</span></a></h3>
+              <img src="assets/images/home/AIGA-Web.png">
+              <h3 class="paragraphContinue"><a href="aiga-census.html"><span class="colorChange">Next: AIGA Design Census</span></a></h3>
             </div>
             <div id="leftFooter">
               <h4>Rachel Lee © 2026</h4>
@@ -56,84 +97,125 @@
           <div class="projectCoverImg"><img src="assets/images/cv/CV cover.png"></div>
           <section class="projectIntroGrid">
             <h5 id="title">Catalog Data Controls</h5>
-            <div id="skills">
-              <h3>Skills<h3>
-              <h4>Platform Design</h4>
-              <h4>Interaction Design</h4>
-              <h4>Systems Design</h4>
-              <h4>Technical Architecture</h4>
+            <h1 id="summary">Giving advertisers control over how their products appear across different marketing objectives.</h1>
+            <div id="contributions">
+              <h3 class="blockHeading">Key contributions</h3>
+              <ul class="blockText paragraphBottom">
+                <li>Defined product direction across both phases and built a design vision for Product Data Versions, shaping the beta roadmap for 5+ downstream engineering workstreams</li>
+                <li>Led advertiser research for Product Data Versions. Conducted alpha exit interviews with 8 advertisers, translated findings into use case framing, and wrote setup guides for beta testers.</li>
+                <li>Partnered with the engineering lead to co-author the technical behaviour proposal before build began</li>
+                <li>Led design execution across both phases, from Configure Sources launch through Product Data Versions alpha and beta</li>
+              </ul>
             </div>
             <div id="role">
-              <h3>Role<h3>
+              <h3>Role</h3>
               <h4>Lead Product Designer</h4>
             </div>
             <div id="collaborators">
-              <h3>Team<h3>
-              <h4>1 Content Designer</h4>
-              <h4>11 Engineers</h4>
-              <h4>1 Product Manager (Consult)</h4>
-              <h4>0.5 Product Marketing Manager</h4>
+              <h3>Team</h3>
+              <h4>1 CD, 11 Eng, 1 PM (Consult), 0.5 PMM</h4>
             </div>
             <div id="timeframe">
-              <h3>Timeframe<h3>
-              <h4>June 2024 - May 2025</h4>
+              <h3>Timeframe</h3>
+              <h4>11 months</h4>
             </div>
-
-            <h1 id="summary">0 → 1 foundational infrastructure giving advertisers direct control over how their product data appears in ads, for every objective.</h1>
             <div id="overview">
-              <p class="paragraphBottom">Meta's <a href="https://www.facebook.com/business/tools/shopping-catalog?ref=search_new_1" target="_blank"><span class="colorChange bodyLink">product catalog ↗</span></a>is the engine behind ads and commerce on Facebook and Instagram. Advertisers upload their products, with information like titles, images, prices, and Meta uses that data to power the ads and storefronts buyers see.</p>
-              <p class="paragraphBottom">Most sophisticated advertisers use multiple data sources, like a Shopify connection, a data feed, to keep that data accurate. When two sources disagree on the same attribute, Meta decides which one wins. Before this project, advertisers had no visibility into that decision and no way to change it.</p>
-              <p class="paragraphBottom">This problem affected two cohorts differently. The first needed one consistent version of each product but had no control over which source won when they conflicted. The second needed products to look different depending on the objective, but their only option was maintaining a separate catalog per objective, which was more overhead, and worse for ads performance.</p>
-              <p class="paragraphBottom">Both groups wanted control over how their products appeared to buyers, but neither had it.</p>
+              <hr class="sectionDivider">
+              <p>Meta's <a href="https://www.facebook.com/business/tools/shopping-catalog?ref=search_new_1" target="_blank"><span class="colorChange bodyLink">product catalog ↗</span></a> powers the product information shown across ads and commerce experiences on Facebook and Instagram.</p>
+              <p class="paragraphContinue">As advertisers grow, they often manage that information using multiple data sources. For example, a Shopify connection for live prices, a data feed for ad-optimised images. When two sources disagree on the same attribute, Meta decides which one wins. Before this project, advertisers had no visibility into that decision and no way to change it.</p>
+              <p class="paragraphContinue">This created two problems. Some advertisers needed one consistent version of each product but had no control over which source won when they conflicted. Others needed products to appear differently across objectives, such as different images for ads versus Shops, but their only option was maintaining separate catalogs per objective, which created overhead and hurt performance.</p>
+              <p class="paragraphContinue paragraphBottom">Through research and strategy work, we realised both problems were manifestations of the same underlying need: advertisers wanted more control over how their products appeared to buyers. That insight shaped the direction of both phases of work: Configure Sources, which gave advertisers visibility and control over their data, and Product Data Versions, which let them apply that control across different objectives.</p>
               <img src="assets/images/cv/cohorts.png" style="width: 100%; display: block; margin-bottom: 1.5rem;">
               <h2>This project is under NDA. Screens shown here have shipped publicly. Full case study is available on request.</h2>
             </div>
+            <hr class="sectionDivider">
           </section>
           <section class="projectContent">
-            <h5 class="projectHeading">Phase 1: Configure Sources</h5>
+            <h5 class="projectHeading">Design principles</h5>
+            <p class="projectText">With two phases addressing the same underlying goal from different angles, I created design principles to keep decisions coherent across both.</p>
+
+            <h3 class="blockHeading paragraphContinue">Transparency before control</h3>
+            <p class="blockText">Advertisers needed to understand their data before they could confidently change it. Configure Sources surfaces which source is winning for each attribute before offering controls to change it. Product Data Versions lets advertisers validate that version data is correct before anything goes live.</p>
+
+            <h3 class="blockHeading paragraphContinue">Create a reusable model for control</h3>
+            <p class="blockText">Advertisers shouldn't need to learn a different workflow for different types of catalog control. Configure Sources and Product Data Versions share the same prioritisation patterns and concepts, so each new capability builds on what advertisers already know, rather than introducing new mental models from scratch.</p>
+
+            <h3 class="blockHeading paragraphContinue">Build foundations that can scale</h3>
+            <p class="blockText">The system was designed to support capabilities beyond the initial Product Data Versions beta without requiring breaking changes later. Localisation is a good example — it wasn't shipped in beta, but the data model had to account for it from the start. Getting the architecture right early meant future capabilities could be added without rebuilding what already existed.</p>
+          </section>
+          <section class="projectContent">
+            <hr class="sectionDivider">
+            <h5 class="projectHeading">Configure Sources</h5>
             <div class="projectText paragraphBottom">
               <p>Configure Sources gave advertisers what they were missing: visibility into which source was winning for each attribute, and the controls to change it.</p>
               <p class="paragraphContinue">I co-led foundational research with our researcher and scoping with engineering, then led design through to launch. Some highlights:</p>
             </div>
 
             <!-- Highlights -->
-            <h1 class="deliverablesHeading3">Discover what's in conflict, then change who wins</h1>
+            <h1 class="deliverablesHeading3">Surfacing conflicts before offering controls</h1>
             <div class="deliverablesImg4"><img src="assets/images/cv/see-priority.png"></img></div>
-            <p class="deliverablesText4">Attributes where sources are setting different values are surfaced first, ordered by how consequential they are. For example, a price conflict matters more than a description conflict. From there, advertisers drag to reprioritise, changing which source wins for any attribute.</p>
+            <p class="deliverablesText4">Advertisers couldn't fix what they couldn't see. Attributes where sources disagree are surfaced first, ordered by how consequential a conflict is. From there, advertisers drag to reprioritise, changing which source wins for any attribute.</p>
             
-            <h1 class="deliverablesHeading3">Meta's default made visible (and overridable)</h1>
+            <h1 class="deliverablesHeading3">Making the default visible</h1>
             <div class="deliverablesImg1"><img src="assets/images/cv/reprioritise.gif"></img></div>
-            <p class="deliverablesText1">For attributes like price and stock, where wrong information has the highest downstream impact, Meta's automatically chosen source is clear. Advertisers can override it, but at least one source must always be set to ensure buyers always see consistent information.</p>
+            <p class="deliverablesText1">Meta had always chosen a winning source if there was a conflict, advertisers just couldn't see which one, or why. Now, the design surfaces that choice explicitly, so advertisers can make an informed decision about their data. They can override it, but at least one source must always be set, so buyers always see accurate product information.</p>
 
           <!-- Configure Sources Outcomes -->
-          <h5 class="projectHeading">Configure Sources: Outcomes</h5>
-          <p class="projectText">Configure Sources exceeded every goal. It exceeded the revenue protection goal by 2x, unblocked advertisers who couldn't run product ads without source-level control, and saved years of engineering time previously spent manually resolving data conflicts.</p>
-          <h2 class="projectText">"The greatest product update from Meta I’ve seen all year." — Director of Marketing, Beauty Group</h2>
+          <h1 class="projectHeading">Results</h1>
+          <div class="blockGroup">
+            <h3 class="blockHeading">Outcomes</h3>
+            <ul class="blockText">
+              <li>Exceeded the revenue protection goal by 2x, protecting hundreds of millions in advertiser revenue</li>
+              <li>Unblocked advertisers who couldn't run product ads without source-level control</li>
+              <li>Saved 2.66 engineering years previously spent manually resolving data conflicts</li>
+            </ul>
+
+            <h3 class="blockHeading paragraphContinue">What it unlocked</h3>
+            <ul class="blockText paragraphBottom">
+              <li>Established the foundation for Product Data Versions and future objective-specific catalog customisation within a single catalog</li>
+            </ul>
+          </div>
+
+          <h2 class="projectText paragraphContinue paragraphBottom">"The greatest product update from Meta I’ve seen all year." — Director of Marketing, Beauty Group</h2>
           
           <!-- PDV -->
-          <h5 class="projectHeading">Phase 2: Product Data Versions</h5>
-          <p class="projectText">
-
-Configure Sources solved the first problem. But advertisers who needed products to look different across objectives still had no solution. Product Data Versions closed that gap by giving advertisers a way to create alternate versions of their product information within a single catalog, without changing the default.</p>
-          <p class="projectText paragraphContinue paragraphBottom">I was the sole designer across both phases, leading design from alpha to beta. Beyond design execution, I co-authored a technical behaviour proposal with engineering to establish the right data model and the right mental model for advertisers before build began, and built a design vision grounded in what advertisers told us wasn't working. Together they became the roadmap for five engineering teams. I also owned the product strategy that got those teams to a shared understanding of the problem and what each needed to build to make the product work. Some highlights:</p>
+          <hr class="sectionDivider">
+          <h5 class="projectHeading">Product Data Versions</h5>
+          <p class="projectText">Configure Sources solved visibility and control within a single representation of a product. Product Data Versions extended that control across objectives — letting advertisers create alternate versions of their product information within a single catalog, without duplicating it or changing what buyers see by default.</p>
+          <p class="projectText paragraphContinue paragraphBottom">Alongside leading design from alpha through beta, I partnered with engineering to define the underlying behavioural model before build began, and created a design vision that aligned multiple teams around a shared direction. Some highlights:</p>
 
            <!-- Highlights -->
-            <h1 class="deliverablesHeading1">Create a version without changing the default</h1>
+            <h1 class="deliverablesHeading1">A version that doesn't disturb the default</h1>
             <div class="deliverablesImg2"><img src="assets/images/cv/create-version.png"></img></div>
-            <p class="deliverablesText4">Advertisers choose which data sources power the version, so products can look different for a specific objective without affecting how they appear anywhere else.</p>
+            <p class="deliverablesText4">Advertisers previously had to create separate catalogs to show products differently for different objectives, a workaround that hurt performance. Versions solve that by letting advertisers create alternate representations of their products within a single catalog, without changing how those products appear by default.</p>
             
             <h1 class="deliverablesHeading1">Validate products before running ads</h1>
             <div class="deliverablesImg3"><img src="assets/images/cv/view-versions.PNG"></img></div>
-            <p class="deliverablesText3">Advertisers can validate that version data uploaded correctly, that version information is applied to the right products, and that the ad looks right before anything goes live.</p>
+            <p class="deliverablesText3">Version data involves layering new sources of information onto existing products. It's easy for something to apply to the wrong products, or not appear as expected, without any visible signal. Validation tools let advertisers review versioned products before launch: confirming data uploaded correctly, checking that version information is applied to the right products, and previewing how the ad will look before anything goes live.</p>
 
           
           <!-- PDV Outcomes -->
-          <h5 class="projectHeading">Product Data Versions: Outcomes</h5>
-          <p class="projectText">Product Data Versions launched to beta with strong advertiser satisfaction and measurable <span id="super"><span class="inlineSuperscript">ROAS improvements<span class="superscript" id="superSmall">1</span></span></span> reported across exit interviews, validating advertiser appetite and securing investment for General Availability. It also unlocked significant opportunity for growth initiatives that now depend on this infrastructure.</p>
+          <h1 class="projectHeading">Results</h1>
+          <div class="blockGroup">
+            <h3 class="blockHeading">Outcomes</h3>
+            <ul class="blockText">
+              <li>Revenue exceeded the ship goal within the first two months of beta</li>
+              <li>Satisfaction scores averaged 8–9/10 across exit interviews</li>
+              <li>Consistent <span id="super"><span class="inlineSuperscript">ROAS improvement<span class="superscript" id="superSmall">1</span></span></span> reported across the beta cohort</li>
+            </ul>
+
+            <h3 class="blockHeading paragraphContinue">What it unlocked</h3>
+            <ul class="blockText paragraphBottom">
+              <li>The design strategy shaped the roadmap for 5+ downstream workstreams</li>
+              <li>Beta results secured investment for the next phase of the product</li>
+            </ul>
+          </div>
 
           <!-- Key Takeaway -->
+           <hr class="sectionDivider">
           <h5 class="projectHeading">Key Takeaway</h5>
-          <p class="projectText paragraphBottom">Design's job isn't just to make things look right. It's to make sure the thinking behind the product is as considered as the product itself.</p>
+          <p class="projectText">The technical behaviour proposal, the advertiser interviews, the go-to-market framing, none of that looks like design work. But each shaped how advertisers would understand and use what we built. Getting the foundation right was as important as getting the design right.</p>
+          <p class="projectText paragraphContinue paragraphBottom">Design's job isn't just to make things look right. It's to make sure the thinking behind the product is as considered as the product itself.</p>
       </section>
     </main>
   </body>
