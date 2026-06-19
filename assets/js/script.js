@@ -241,6 +241,10 @@ $(window).scroll(function() {
 
     closeBtn.addEventListener('click', closeLightbox);
 
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeLightbox();
+    });
+
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLightbox();
     });
