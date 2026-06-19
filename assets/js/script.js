@@ -212,6 +212,7 @@ $(window).scroll(function() {
 /* LIGHTBOX */
 (function() {
   function initLightbox() {
+    if (!document.body.classList.contains('case-study')) return;
     var overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
 
