@@ -209,6 +209,55 @@ $(window).scroll(function() {
   }
 });
 
+/* LIGHTBOX */
+(function() {
+  function initLightbox() {
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+
+    var closeBtn = document.createElement('button');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.textContent = '✕';
+
+    var img = document.createElement('img');
+    img.className = 'lightbox-img';
+
+    overlay.appendChild(closeBtn);
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
+
+    function openLightbox(src) {
+      img.src = src;
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+      img.src = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Wire up all images except those inside .projectCoverImg
+    document.querySelectorAll('img').forEach(function(el) {
+      if (el.closest('.projectCoverImg')) return;
+      el.classList.add('lightbox-trigger');
+      el.addEventListener('click', function() {
+        openLightbox(el.src);
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initLightbox);
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
 
   /* Per-element random color for external links — squiggle colored on load, text on hover */

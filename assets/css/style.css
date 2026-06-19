@@ -378,7 +378,7 @@ img {
 #featureNumber {
     float: left;
     display: inline-block;
-    padding: 0em 2em 0 0;
+    padding: 0em 1em 0 0;
     transition: opacity 0.4s ease;
 }
 
@@ -490,6 +490,7 @@ img {
     grid-column: 1 / 4;
     float: left;
     margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 .projectText {
@@ -499,7 +500,7 @@ img {
 }
 
 .paragraphContinue {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .video {
@@ -714,6 +715,52 @@ path.arrow {
 
   /* Hide superscript numbers — left panel not visible on mobile */
   .superscript {display: none;}
+}
+
+/* LIGHTBOX */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.88);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-overlay.is-open {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #F6F6F2;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.15s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+/* Cursor pointer on lightbox-able images */
+img.lightbox-trigger {
+  cursor: zoom-in;
 }
 
 /* Smartphone screen width */
