@@ -41,16 +41,17 @@ h3 {
 .blockHeading {
     font-family: var(--font-title);
     font-size: 1.1em;
-    grid-column: 4 / 9;
+    grid-column: 1 / 9;
     padding-top: 0.5em;
+    padding-bottom: 0.5rem;
 }
 
 .blockText {
-    grid-column: 4 / 9;
+    grid-column: 1 / 9;
 }
 
 .blockGroup {
-    grid-column: 4 / 9;
+    grid-column: 1 / 9;
 }
 
 .sectionDivider {
@@ -487,16 +488,15 @@ img {
 }
 
 .projectHeading {
-    grid-column: 1 / 4;
-    float: left;
+    grid-column: 1 / 9;
+    float: none;
     margin-top: 1rem;
-    margin-right: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .projectText {
-    grid-column: 4 / 9;
+    grid-column: 1 / 9;
     margin-top: 1rem;
-    float: right;
 }
 
 .paragraphContinue {
@@ -655,8 +655,7 @@ path.arrow {
   .projectIntroGrid {padding-bottom: 1.5em;}
   .deliverablesText1, .deliverablesText3 {grid-column: 2 / 8;}
   .deliverablesText2, .deliverablesText4, .aboutText {grid-column: 3 / 9;}
-  .projectHeading, .aboutHeading {grid-column: 1 / 9;}
-  .projectText { grid-column: 1 / 7;}
+  .aboutHeading {grid-column: 1 / 9;}
 
   /* Home page: text spans full container width, images stack below */
   .featureText {grid-column: 1 / 9; padding-right: 0;}

@@ -77,7 +77,7 @@
         <main class="leftContainer">
             <div class="leftContent">
               <h4 id="featureNumber">01</h4><h3 id="featureTitle" >Product Representation Controls</h3>
-              <h2 class="paragraphContinue" id="featureSummary">0→1 infrastructure helping advertisers showcase the right version of their products across objectives, built on a single foundation.</h2>
+              <h2 class="paragraphContinue" id="featureSummary">Defining the foundations for flexible product representation</h2>
             </div>
             <!-- superscript -->
             <div class="leftContent" id="superContent1">
@@ -97,14 +97,15 @@
           <div class="projectCoverImg"><img src="assets/images/cv/CV cover.png"></div>
           <section class="projectIntroGrid">
             <h5 id="title">Product Representation Controls</h5>
-            <h1 id="summary">0→1 infrastructure helping advertisers showcase the right version of their products across objectives, built on a single foundation.</h1>
+            <h1 id="summary">Defining the foundations for flexible product representation</h1>
             <div id="contributions">
               <h3 class="blockHeading">Key contributions</h3>
               <ul class="blockText paragraphBottom">
-                <li>Recognised a shared advertiser need across multiple initiatives and helped define product direction for Product Representation Controls.</li>
-                <li>Created the design vision for Product Data Versions, aligning teams around how product representation could evolve and shaping the roadmap for 5+ downstream workstreams.</li>
-                <li>Led advertiser research across Product Data Versions alpha, translating insights into use case framing, beta priorities, and go-to-market preparation.</li>
-                <li>Partnered with engineering to define foundational behaviours before build began, helping ensure the product evolved around advertiser needs rather than internal assumptions.</li>
+                <li>Recognised that Configure Sources and Product Data Versions were two expressions of the same advertiser need: intentional control over how products appear to buyers.</li>
+                <li>Helped define Product Representation Controls as the shared product direction across both investments, connecting one consistent product representation and flexible representations under one foundation.</li>
+                <li>Partnered with engineering to define foundational behaviours before build began, clarifying what Product Data Versions should and shouldn’t control so the product evolved around advertiser needs rather than internal assumptions.</li>
+                <li>Developed the design vision for Product Data Versions, aligning teams around how product representation could evolve and shaping the roadmap for 5+ downstream workstreams.</li>
+                <li>Translated alpha learnings into beta priorities, use-case framing, and setup guidance for advertisers.</li>
               </ul>
             </div>
             <div id="role">
@@ -113,7 +114,7 @@
             </div>
             <div id="collaborators">
               <h3>Team</h3>
-              <h4>1 CD, 11 Eng, 1 PM (Consult), 0.5 PMM</h4>
+              <h4>1 CD, 11 Eng, 1UXR, PM and PMM consult</h4>
             </div>
             <div id="timeframe">
               <h3>Timeframe</h3>
@@ -121,57 +122,64 @@
             </div>
             <div id="overview">
               <hr class="sectionDivider">
-              <p>Meta's <a href="https://www.facebook.com/business/tools/shopping-catalog?ref=search_new_1" target="_blank"><span class="colorChange bodyLink">product catalog ↗</span></a> powers the product information shown across ads and commerce experiences on Facebook and Instagram.</p>
-              <p class="paragraphContinue">Sophisticated advertisers often needed more control over how their products were represented to buyers. Some needed greater control over how product information was prioritised across multiple data sources. Others needed products to appear differently across objectives, but their only option was maintaining separate catalogs.</p>
-              <p class="paragraphContinue paragraphBottom">Through research and strategy work, we recognised that seemingly different advertiser requests were manifestations of the same underlying need: greater control over how products appeared to buyers. Solving those needs independently risked creating disconnected experiences as new forms of product control were introduced. That insight shaped two phases of work: Configure Sources, which established transparency and control over product data, and Product Data Versions, which extended that control across objectives.</p>
+              <p>Meta's <a href="https://www.facebook.com/business/tools/shopping-catalog?ref=search_new_1" target="_blank"><span class="colorChange bodyLink">product catalog ↗</span></a> powers the product information buyers see across ads and commerce surfaces. For most advertisers, one catalogue was enough. More sophisticated advertisers had two different representation problems.</p>
+              <p class="paragraphContinue">Some needed one reliable product representation when multiple sources provided conflicting titles, images, prices, or availability. Others needed the same products to appear differently across objectives, markets, or surfaces.</p>
+              <p class="paragraphContinue">These were initially scoped as separate investments: Configure Sources and Product Data Versions. As I got closer to both problem spaces, I realised they were two expressions of the same underlying need: advertisers wanted more intentional control over how products appeared to buyers.</p>
+              <p class="paragraphContinue paragraphBottom">That insight became the foundation for Product Representation Controls: a shared product direction for how advertisers manage product representation across Meta.</p>
               <img src="assets/images/cv/cohorts.png" style="width: 100%; display: block; margin-bottom: 1.5rem;">
-              <h2>This project is under NDA. Screens shown here have shipped publicly. Full case study is available on request.</h2>
+              <h2>This project is under NDA. Screens shown here have shipped publicly. A deeper walkthrough is available on request.</h2>
             </div>
             <hr class="sectionDivider">
           </section>
           <section class="projectContent">
+            <h5 class="projectHeading">Two capabilities, one foundation</h5>
+            <h3 class="blockHeading">Configure Sources</h3>
+            <p class="blockText">Helped advertisers create one consistent product representation by showing which data source was winning for each attribute, and giving them controls to change it.</p>
+            <h3 class="blockHeading paragraphContinue">Product Data Versions</h3>
+            <p class="blockText">Helped advertisers adapt that representation for different objectives, markets, or surfaces without maintaining separate catalogs.</p>
+            <p class="blockText paragraphContinue paragraphBottom">Together, they became one foundation for how advertisers control product representation across Meta.</p>
+          </section>
+          <hr class="sectionDivider">
+
+          <section class="projectContent">
             <h5 class="projectHeading">Design principles</h5>
-            <p class="projectText">With two phases addressing the same underlying goal from different angles, I created design principles to keep decisions coherent across both.</p>
+            <p class="projectText">Configure Sources established the first control pattern. As the work expanded into Product Data Versions, the challenge was making sure flexible representation built on that pattern instead of introducing a separate way to manage product data.</p>
 
             <h3 class="blockHeading paragraphContinue">Transparency before control</h3>
-            <p class="blockText">Advertisers needed to understand their data before they could confidently change it. Configure Sources surfaces which source is winning for each attribute before offering controls to change it. Product Data Versions lets advertisers validate that version data is correct before anything goes live.</p>
+            <p class="blockText">Advertisers needed to understand their data before they could confidently change it. Configure Sources showed which source was winning for each attribute before offering controls to change it. Product Data Versions let advertisers validate version data before anything went live.</p>
 
             <h3 class="blockHeading paragraphContinue">Build on what advertisers already know</h3>
-            <p class="blockText">Advertisers shouldn't need to learn a different workflow for different types of catalog control. Configure Sources and Product Data Versions share the same prioritisation patterns and concepts, so each new capability builds on what advertisers already know, rather than introducing new mental models from scratch.</p>
+            <p class="blockText">Advertisers should not have to relearn how product control works every time a new type of control is added. Product Data Versions reused the prioritisation patterns introduced in Configure Sources, so flexible representation built on controls advertisers already understood.</p>
 
             <h3 class="blockHeading paragraphContinue">Build foundations that can evolve</h3>
-            <p class="blockText paragraphBottom">Localisation wasn't part of the beta, but future needs like it had to be considered from the start. Making those decisions early meant new capabilities could be added without rethinking how product representation worked.</p>
+            <p class="blockText paragraphBottom">Localisation was not part of the beta, but the underlying structure had to support it later. Making those decisions early meant future capabilities could extend the foundation instead of forcing advertisers to relearn how product representation worked.</p>
           </section>
           <section class="projectContent">
             <hr class="sectionDivider">
             <h5 class="projectHeading">Configure Sources</h5>
             <div class="projectText">
-              <p>Configure Sources addressed a long-standing advertiser request: greater control over how conflicting product information was resolved.</p>
-              <p class="paragraphContinue">We knew advertisers needed transparency and control. The question was how those controls should work. Across research and iteration, we repeatedly saw that advertisers needed to understand why the system was behaving the way it was before they felt confident changing it. That principle shaped the final experience.</p>
+              <p>Configure Sources addressed the first representation problem: when multiple sources provided conflicting product information, advertisers needed to understand which source was winning, why, and how to change it.</p>
+              <p class="paragraphContinue">The key design challenge was sequencing: advertisers needed to understand why the system was behaving the way it was before they felt confident changing it. That principle shaped the final experience.</p>
             </div>
 
             <!-- Highlights -->
             <h1 class="deliverablesHeading4">Surfacing conflicts before offering controls</h1>
             <div class="deliverablesImg4"><img src="assets/images/cv/see-priority.png"></img></div>
-            <p class="deliverablesText2">Advertisers couldn't fix what they couldn't see. Attributes where sources disagree are surfaced first, ordered by how consequential a conflict is. From there, advertisers drag to reprioritise, changing which source wins for any attribute.</p>
+            <p class="deliverablesText2">Advertisers could not fix what they could not see. Attributes where sources disagreed were surfaced first, ordered by business consequence. From there, advertisers could drag to reprioritise which source should win for each attribute.</p>
             
             <h1 class="deliverablesHeading1">Making the default visible</h1>
             <div class="deliverablesImg1"><img src="assets/images/cv/reprioritise.gif"></img></div>
-            <p class="deliverablesText3">Meta had always chosen a winning source if there was a conflict, advertisers just couldn't see which one, or why. Now, the design surfaces that choice explicitly, so advertisers can make an informed decision about their data. They can override it, but at least one source must always be set, so buyers always see accurate product information.</p>
+            <p class="deliverablesText3">Meta had always selected a winning source when conflicts existed, but advertisers could not see which source was selected or why. The new experience made that choice visible, so advertisers could make an informed decision about their data. They could override it, but at least one source always had to be set, ensuring buyers continued to see accurate product information.</p>
 
           <!-- Configure Sources Outcomes -->
-          <h1 class="projectHeading">Results</h1>
+          <h5 class="projectHeading">Results</h5>
           <div class="blockGroup">
-            <p class="blockText">By making prioritisation transparent before making it configurable, the catalog stopped being something that happened to advertisers and became something they could actively control.
-</p>
-            <h3 class="blockHeading paragraphContinue">Outcomes</h3>
-            <ul class="blockText">
+            <p class="blockText">By making prioritisation transparent before making it configurable, the catalog stopped feeling like something that happened to advertisers and became something they could actively control.</p>
+            <ul class="blockText paragraphContinue">
               <li>Exceeded the revenue protection goal by 2x, protecting hundreds of millions in advertiser revenue</li>
               <li>Unblocked advertisers who couldn't run product ads without source-level control</li>
               <li>Saved 2.66 engineering years previously spent manually resolving data conflicts</li>
             </ul>
-
-            <h3 class="blockHeading paragraphContinue">What it unlocked</h3>
             <ul class="blockText paragraphBottom">
               <li>Established the foundation for Product Data Versions and future objective-specific catalog customisation within a single catalog</li>
             </ul>
@@ -182,49 +190,41 @@
           <!-- PDV -->
           <hr class="sectionDivider">
           <h5 class="projectHeading">Product Data Versions</h5>
-          <p class="projectText">Configure Sources established transparency and control over product data. Product Data Versions built on that foundation, giving advertisers more flexibility in how their products appeared depending on where and how they were advertising.</p>
-          <p class="projectText paragraphContinue paragraphBottom">Advertisers had long needed this flexibility, but the existing catalog wasn't designed for it. The challenge wasn't just introducing a new capability. We needed a clear definition of what versions should do—one grounded in how advertisers actually wanted to use them and flexible enough to support future needs as the product evolved.</p>
-
+          <p class="projectText">Product Data Versions addressed the second representation problem: advertisers needed to adapt the same product for different markets, surfaces, and marketing objectives.</p>
+          <p class="projectText paragraphContinue paragraphBottom">The key decision was defining what a Version should control. Advertisers needed to change context-specific product information, like titles, images, descriptions, or other attributes, without duplicating products or maintaining separate catalogs. That meant a Version should change how product information appears in a specific context, without changing the default product information used elsewhere.</p>
+          
            <!-- Highlights -->
-            <h1 class="deliverablesHeading1">Defining what a version is</h1>
+            <h1 class="deliverablesHeading1">Creating a Version</h1>
             <div class="deliverablesImg2"><img src="assets/images/cv/create-version.png"></img></div>
              <div class="deliverablesText4">
-              <p>Advertisers previously had to maintain separate catalogs to show products differently across use cases, a workaround that hurt performance. Product Data Versions solved that by letting advertisers create alternate representations of their products without changing what buyers see by default.</p>
-              <p class="paragraphContinue">One of the most important decisions was defining what versions should actually do. Advertisers weren't looking for a way to create new products. They wanted more control over how existing products were presented depending on where and how they were running ads.</p>
-              <p class="paragraphContinue">Getting that definition right helped create a product that was more coherent, easier to position, and flexible enough to support future use cases without reinventing the model each time.</p>
+              <p>When creating a Version, advertisers could choose from data sources already in their catalog, or upload a new source for that Version only. This let them introduce alternate product information without changing the default product information buyers saw elsewhere.</p>
+              <p class="paragraphContinue">When multiple sources were selected, advertisers could drag them into priority order using the same pattern introduced in Configure Sources. For the beta, we kept this control at the source level, so advertisers could prioritise a curated Version source while using existing sources to fill in the rest.</p>
             </div>
             
             <h1 class="deliverablesHeading1">Validate products before running ads</h1>
             <div class="deliverablesImg3"><img src="assets/images/cv/view-versions.PNG"></img></div>
             <div class="deliverablesText3">
-              <p>Product Data Versions introduced more flexibility, but also more complexity. Advertisers needed confidence that the right products and information would appear before spending money on ads.</p>
-              <p class="paragraphContinue">Validation tools let advertisers confirm everything looks right before anything runs: that data applied correctly, that the right products are included, and that ads will appear as intended.</p>
-              <p class="paragraphContinue">Building confidence into the workflow was as important as the capability itself.</p>
+              <p>More flexibility meant advertisers needed clearer ways to trust the output before using a Version in ads. They needed to confirm that Version data had applied correctly and ads would appear as intended before committing spend.</p>
+              <p class="paragraphContinue">Instead of relying on one preview to explain the whole system, we built validation into the moments where confidence mattered: after data upload, when products were organised for ads, and during ad setup.</p>
             </div>
 
           
           <!-- PDV Outcomes -->
           <h1 class="projectHeading">Results</h1>
           <div class="blockGroup">
-            <h3 class="blockHeading">Outcomes</h3>
-            <ul class="blockText">
-              <li>Revenue exceeded the ship goal within the first two months of beta</li>
-              <li>Satisfaction scores averaged 8–9/10 across exit interviews</li>
-              <li>Consistent <span id="super"><span class="inlineSuperscript">ROAS improvement<span class="superscript" id="superSmall">1</span></span></span> reported across the beta cohort</li>
-            </ul>
-
-            <h3 class="blockHeading paragraphContinue">What it unlocked</h3>
-            <ul class="blockText paragraphBottom">
-              <li>The design vision shaped the roadmap for 5+ future product representation capabilities</li>
+            <p class="blockText">Product Data Versions validated demand for flexible product representation and gave the team a foundation for future representation capabilities.</p>
+            <ul class="blockText paragraphContinue paragraphBottom">
+              <li>Generated significant campaign revenue within the first two months of beta</li>
+               <li>Beta advertisers reported consistent <span id="super"><span class="inlineSuperscript">ROAS improvement<span class="superscript" id="superSmall">1</span></span></span></li>
+              <li>Averaged 8.5/10 satisfaction across exit interviews</li>
+              <li>Design vision shaped the roadmap for 5+ downstream product representation workstreams</li>
             </ul>
           </div>
 
           <!-- Key Takeaway -->
            <hr class="sectionDivider">
           <h5 class="projectHeading">Key Takeaway</h5>
-          <p class="projectText">The most important work on this project wasn't designing screens. It was helping define what product representation should be before those decisions became embedded in the system.</p>
-          <p class="projectText paragraphContinue">The advertiser research, design vision, and foundational behaviour work all served the same goal: creating a product grounded in how advertisers actually worked, while giving the business room to evolve it over time.</p>
-          <p class="projectText paragraphContinue paragraphBottom">Design's job isn't just to make things look right. It's to make sure the thinking behind the product is as considered as the product itself.</p>
+          <p class="projectText paragraphBottom">In technical product spaces, the interface is only as clear as the assumptions behind it. For Product Representation Controls, advertiser research, product strategy, engineering behaviour, and go-to-market framing all had to tell the same story: what control advertisers had, what it changed, and how they could trust it. Bringing design closer to those decisions helped turn a technically complex product into something advertisers could understand, trust, and use with confidence.</p>
       </section>
     </main>
   </body>
