@@ -41,13 +41,13 @@ h3 {
 .blockHeading {
     font-family: var(--font-title);
     font-size: 1.1em;
-    grid-column: 4 / 9;
+    grid-column: 1 / 9;
     padding-top: 0.5em;
     padding-bottom: 0.5rem;
 }
 
 .blockText {
-    grid-column: 4 / 9;
+    grid-column: 1 / 9;
 }
 
 .blockGroup {
