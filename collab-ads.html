@@ -32,8 +32,17 @@
           #summary { padding-top: 0; }
           #role, #collaborators, #timeframe { padding-bottom: 2em; }
 
+          /* Walkthrough images (Phase 1 / Phase 2) — full-width */
+          .walkthroughImg {
+            grid-column: 1 / 9;
+            width: 100%;
+            display: block;
+            margin-bottom: 1.5rem;
+          }
+
           /* iPad Pro (max-width: 1024px) — shift all rows down by 1 to make room for contributions */
           @media (max-width: 1024px) {
+            body .projectIntroGrid { padding: 0 2em 0 2em; }
             #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
             #role          { grid-column: 5 / 9; grid-row: 4; }
             #collaborators { grid-column: 1 / 5; grid-row: 5; }
@@ -44,12 +53,17 @@
 
           /* Tablet / mobile (max-width: 768px) — single column stack */
           @media (max-width: 768px) {
+            body .projectIntroGrid { padding: 0 2em 0 2em; }
             #contributions { grid-column: 1 / 9; grid-row: 3; padding-bottom: 1.5em; }
             #role          { grid-column: 1 / 9; grid-row: 4; }
             #collaborators { grid-column: 1 / 9; grid-row: 5; }
             #timeframe     { grid-column: 1 / 9; grid-row: 6; }
             #summary       { grid-column: 1 / 9; grid-row: 2; }
             #overview      { grid-column: 1 / 9; grid-row: 7; }
+          }
+
+          @media (max-width: 504px) {
+            body .projectIntroGrid { padding: 0 1.5em 1.5em 1.5em; }
           }
         </style>
         <script type="text/javascript" src="assets/js/jquery.js"></script>
@@ -73,7 +87,7 @@
         <main class="leftContainer">
             <div class="leftContent">
               <h4 id="featureNumber">01</h4><h3 id="featureTitle" >Collaborative Ads Brand Onboarding & Activation</h3>
-              <h2 class="paragraphContinue" id="featureSummary">A two-phase redesign that reduced retailer overhead, rebuilt confidence in the product, and shifted onboarding from retailer-led to brand-initiated.</h2>
+              <h2 class="paragraphContinue" id="featureSummary">A two-phase redesign that reduced retailer burden, rebuilt partner trust, and made brand-initiated onboarding possible.</h2>
             </div>
             <!-- superscript -->
             <div class="leftContent leftImg" id="superContent1">
@@ -96,13 +110,13 @@
           <div class="projectCoverImg"><img src="assets/images/collab-ads/CPAS Cover.png"></div>
           <section class="projectIntroGrid">
             <h5 id="title">Collaborative Ads Brand Onboarding & Activation</h5>
-            <h1 id="summary">A two-phase redesign that reduced retailer overhead, rebuilt confidence in the product, and shifted onboarding from retailer-led to brand-initiated.</h1>
+            <h1 id="summary">A two-phase redesign that reduced retailer burden, rebuilt partner trust, and made brand-initiated onboarding possible.</h1>
             <div id="contributions">
               <h3 class="blockHeading">Key contributions</h3>
               <ul class="blockText paragraphBottom">
-                <li>Evaluated the existing Phase 1 direction, reframed how key friction points were addressed based on retailer and brand workflows, and secured leadership buy-in before implementation.</li>
-                <li>Unified 7 separately scoped roadmap projects into one workstream, giving the team end-to-end visibility across the problem space and revealing that one initiative was already solved by the proposed direction.</li>
-                <li>Led the vision for a brand-initiated onboarding and activation experience and shaped the strategy with PM and Engineering.</li>
+                <li>Pressure-tested the scoped Phase 1 direction before build began; audited retailer and brand flows, identified the highest-leverage friction, and aligned leadership on a more focused approach.</li>
+                <li>Unified 7 separately scoped roadmap projects into one end-to-end workstream, revealing that one initiative was already solved by the proposed direction.</li>
+                <li>Led the vision for brand-initiated onboarding across discovery, setup, and activation; partnered with PM and Engineering to shape the strategy and implementation path.</li>
                 <li>Co-presented concepts to retailer partners and used their feedback to reshape the implementation strategy.</li>
               </ul>
             </div>
@@ -121,11 +135,11 @@
             <div id="overview">
               <hr class="sectionDivider">
               <p><a href="https://en-gb.facebook.com/business/tools/collaborative-ads" target="_blank"><span class="colorChange bodyLink">Collaborative Ads ↗</span></a> lets brands run ads that direct buyers to their products sold through retailer websites and apps. Brands run the ads, retailers own the catalog and fulfil the sale, and Meta connects them.</p>
-              <p class="paragraphContinue">Before a brand could advertise, a retailer had to send them a collaboration invitation. The process was broken in ways neither side could easily fix on their own.</p>
-              <p class="paragraphContinue">The deeper problem wasn't just friction. Onboarding was highly dependent on retailers: retailers initiated requests, managed reviews, and absorbed the operational cost of every new brand they onboarded. More brands meant more retailer work, which incentivised retailers to gate access and prioritise their largest advertisers. Most brands discovered the product only when a retailer reached out, waited weeks for manual review, and still weren't ready to run ads by the end of it.</p>
-              <p class="paragraphContinue paragraphBottom">Phase 1 reduced retailer overhead and rebuilt confidence in Collaborative Ads. Phase 2 shifted onboarding from a retailer-managed process to a brand-initiated one.</p>
+              <p class="paragraphContinue">Before a brand could advertise, a retailer had to send them a collaboration invitation. The deeper problem wasn't just friction; it was the incentive structure around onboarding.</p>
+              <p class="paragraphContinue">The deeper problem wasn't just friction. It was the incentive structure around onboarding: every new brand created more retailer work, so partners naturally gated access and prioritised their largest brands. Most brands only discovered Collaborative Ads when contacted, waited weeks for manual review, and still weren't ready to run ads after setup.</p>
+              <p class="paragraphContinue paragraphBottom">Phase 1 reduced retailer burden and rebuilt confidence in Collaborative Ads. Phase 2 shifted onboarding from a retailer-managed process to a brand-initiated one.</p>
               <img src="assets/images/collab-ads/how-it-works.png" style="width: 100%; display: block; margin-bottom: 1.5rem;">
-              <h2>This project is under NDA. Screens shown here have shipped publicly. Full case study is available on request.</h2>
+              <h2>This project is under NDA. Screens shown here have shipped publicly. A deeper walkthrough is available on request.</h2>
             </div>
             <hr class="sectionDivider">
           </section>
@@ -135,12 +149,12 @@
             <p class="projectText paragraphContinue paragraphBottom">Retailers had spent years working around a product that hadn't kept pace with their needs. Before asking them to support a more ambitious onboarding model, we needed to demonstrate that we understood the problems they faced every day and were willing to invest in fixing them. Phase 1 focused on rebuilding that confidence. Phase 2 used it to make a structural change.</p>
           </section> -->
           <section class="projectContent">
-            <h5 class="projectHeading">Phase 1: Reducing retailer overhead</h5>
-            <p class="projectText">When I joined the team, a direction had already been scoped. Before committing to implementation, I audited the retailer and brand experience, reviewed partner feedback, and formed my own view of where the biggest onboarding constraints were. I got leadership and team buy-in to revise the approach before build began.</p>
-            <p class="projectText paragraphContinue">While the friction points were already known, I identified which were worth prioritising in this phase and reshaped how we addressed them. We focused on the changes that would have the greatest impact on retailer and brand workflows, while staying within the constraints of the product and timeline.</p>
-             <p class="projectText paragraphContinue">Retailers had collaboration requirements but no way to enforce them— brands sent screenshots to prove compliance and waited for manual verification. 80% of brands didn't know an invitation was waiting because we never notified them. Permissions were treated as a secondary step, even though assigning access to both the ad account and catalog segment determined whether a brand could run ads at all.</p>
-             <p class="projectText paragraphContinue paragraphBottom">Together, they turned onboarding into a manual, time-consuming process for retailers and left brands waiting weeks to complete setup.</p>
-            <img src="assets/images/collab-ads/phase-1-overview.png" style="grid-column: 4 / 9; width: 100%; display: block; margin-bottom: 1.5rem;">
+            <h5 class="projectHeading">Phase 1: Reducing retailer burden</h5>
+            <p class="projectText">When I joined the team, a direction had already been scoped. Before committing to implementation, I audited the retailer and brand experience, reviewed partner feedback, and formed a point of view on which friction mattered most to solve first.</p>
+            <p class="projectText paragraphContinue">The friction points were already known, the question was how to address them in a way that worked for both brands and retailers. I got leadership and team buy-in to revise the approach before build began, focusing Phase 1 on changes that reduced retailer effort, removed brand confusion, and fit within product and timeline constraints.</p>
+             <p class="projectText paragraphContinue">Retailers had collaboration requirements but no way to enforce them, so brands sent screenshots to prove compliance and waited for manual verification. At the same time, 80% of brands didn't know an invitation was waiting, and permissions were treated as secondary even though brands needed ad account and catalog segment access before they could run ads.</p>
+             <p class="projectText paragraphContinue paragraphBottom">Together, these gaps made onboarding manual for retailers and left brands waiting weeks to complete setup..</p>
+            <img src="assets/images/collab-ads/phase-1-overview.png" class="walkthroughImg">
 
             <!-- Highlights -->
             <h1 class="deliverablesHeading2">Collaboration terms enforced end-to-end</h1>
@@ -157,43 +171,45 @@
             
             <!-- Phase 1 Outcomes -->
 
-          <h1 class="projectHeading">Results</h1>
+          <h5 class="projectHeading">Results</h5>
           <div class="blockGroup">
             <ul class="blockText paragraphBottom">
               <li>Onboarding completion rate increased by 13%</li>
-              <li>Retailers increased investment in Collaborative Ads and actively promoted it to brands</li>
+              <li>Retailers began actively promoting Collaborative Ads to more brands</li>
             </ul>
           </div>
 
           <hr class="sectionDivider">
             
             <h5 class="projectHeading">Phase 2: From retailer-led to brand-initiated</h5>
-            <p class="projectText">Phase 1 reduced retailer overhead and rebuilt confidence in the product. With the foundations in place, a harder problem remained: brands could only start using Collaborative Ads if a retailer sent them an invitation.</p>
-            <p class="projectText paragraphContinue">We knew reducing onboarding friction alone wouldn't be enough. I led the vision for an end-to-end experience spanning discovery, onboarding, and activation, bringing Collaborative Ads to the surfaces brands already used and reducing retailer involvement throughout the process.</p>
-            <p class="projectText paragraphContinue">We pitched the concept to our largest retailer partners. All liked the idea, but only one could commit. The others lacked the resources, couldn't meet our timeline, or hadn't launched their own brand portals yet.</p>
-            <p class="projectText paragraphContinue paragraphBottom">That forced a strategic pivot. Rather than relying on retailer-owned surfaces, we shifted the experience to Collaboration Center, Meta's hub for retailer-brand collaborations. It had significantly less traffic, but gave us full control and the ability to scale independently.</p>
-            <img src="assets/images/collab-ads/phase-2-overview.png" style="grid-column: 4 / 9; width: 100%; display: block; margin-bottom: 1.5rem;">
+            <p class="projectText">Phase 1 reduced retailer burden and rebuilt confidence in Collaborative Ads, but it didn’t change the underlying dependency: brands still needed a collaboration invitation from retailers before they could get started.</p>
+            <p class="projectText paragraphContinue">To scale brand acquisition, I led the vision for a less retailer-led journey across discovery, setup, and activation: brands could discover Collaborative Ads, initiate setup themselves, and get to their first campaign with much less retailer support.</p>
+            <p class="projectText paragraphContinue paragraphBottom">The key tradeoff was where to build it. Retailer-owned brand portals were the natural discovery surface, but required partner engineering investment. Collaboration Center had lower existing traffic, but gave us full control and could scale independently. We shifted the primary implementation there.</p>
+            <img src="assets/images/collab-ads/brand-initiated-overview.jpg" class="walkthroughImg">
+            <p class="projectText paragraphContinue paragraphBottom">Brand-initiated onboarding supported two completion paths: self-serve onboarding where retailers were ready to automate setup, and collaboration requests where review was still required. This walkthrough focuses on the self-serve path, where brands could complete setup without waiting for retailer review.</p>
+            <img src="assets/images/collab-ads/phase-2-overview.png" class="walkthroughImg">
 
-            <h1 class="deliverablesHeading2">One entrypoint for all brands</h1>
+            <h1 class="deliverablesHeading2">One entry point for all brands</h1>
             <div class="deliverablesImg3"><img src="assets/images/collab-ads/form-full.gif"></img></div>
-            <p class="deliverablesText1">Brands shouldn't need to understand which onboarding model a retailer supports. Rather than creating separate entry points, we designed a single form that routes based on retailer selection: self-serve where available, a guided collaboration request where it isn't.</p>
+            <p class="deliverablesText1">Brands shouldn't need to understand which onboarding path each retailer supports. We designed one form that adapts based on retailer selection: self-serve onboarding where available, and a guided collaboration request where review is still required.</p>
 
             <h1 class="deliverablesHeading1">Real-time verification</h1>
             <div class="deliverablesImg1"><img src="assets/images/collab-ads/verify-url.gif"></img></div>
-            <p class="deliverablesText4">Shop URL verification gave brands a way to prove their relationship with a retailer without requiring retailer involvement, turning a multi-week manual process into something that could happen in a single session. Every brand already has a shop URL, so nothing extra is needed to get started. The approach required a deliberate security tradeoff: we implemented compensating mitigations before shipping to ensure it could be done safely at scale.</p>
+            <p class="deliverablesText4">Shop URL verification let brands prove they sold through a retailer without retailer review, turning a multi-week manual process into something that could happen in one session. Brands were more likely to know their shop URL than an internal retailer ID, and we could still extract the ID behind the scenes to verify the relationship automatically.</p>
+            <p class="deliverablesText4">The approach required a deliberate security tradeoff. We worked through the risk with Legal and added mitigations, including masking private catalog data, before shipping.</p>
               
             <h1 class="deliverablesHeading3">A direct path to the first ad</h1>
             <div class="deliverablesImg3"><img src="assets/images/collab-ads/run-ads.GIF"></img></div>
-            <p class="deliverablesText3">36% of brands who completed onboarding never ran an ad. One hypothesis was that there was no clear path to ad creation after setup. The Overview tab tests that hypothesis by providing a direct entry point to launch a Collaborative Ads campaign with defaults applied, alongside any remaining setup actions.</p>
+            <p class="deliverablesText3">36% of brands who completed onboarding never ran an ad. The Overview tab addressed that gap by providing a direct entry point to launch a Collaborative Ads campaign with defaults applied, alongside any remaining setup actions.</p>
 
           <!-- Phase 2 Outcomes -->
-           <h1 class="projectHeading">Results</h1>
+           <h5 class="projectHeading">Results</h5>
           <div class="blockGroup">
             <ul class="blockText paragraphBottom">
               <li>Our largest retailer made Collaborative Ads available to every brand on their platform for the first time.</li>
-              <li>Exceeded the daily revenue goal by ~37%.</li>
-              <li>Onboarded thousands of new brands in the first weeks post-launch.</li>
-              <li>Self-serve onboarding launched with our largest retailer partner, with four more in implementation.</li>
+              <li>Exceeded the daily revenue goal by ~17%.</li>
+              <li>Onboarded 8,700+ new brands in the first weeks post-launch.</li>
+              <li>Self-serve onboarding launched with our largest retailer, with 4 more retailers implementing or committed to launch.</li>
             </ul>
           </div>
 
@@ -201,7 +217,8 @@
 
           <!-- Key Takeaway -->
           <h5 class="projectHeading">Key Takeaway</h5>
-          <p class="projectText paragraphBottom">Phase 1 wasn't just about fixing friction, it created the conditions for a larger structural change. Our largest retailer made Collaborative Ads available to every brand on their platform because we'd already shown we understood their workflow and constraints. Trust isn't a soft outcome; it determines what you can build next.</p>
+          <p class="projectText">Phase 1 wasn't just about fixing friction. It reduced the operational burden that made retailers cautious about opening Collaborative Ads to more brands.</p>
+          <p class="projectText paragraphContinue paragraphBottom">That trust created room for the larger structural change in Phase 2: brands could initiate onboarding themselves, while retailers kept the controls they needed. The biggest lesson was that in multi-party systems, trust is built by making the system easier for every party to participate in.</p>
       </section>
     </main>
   </body>

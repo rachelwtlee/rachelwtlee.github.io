@@ -119,9 +119,9 @@ function cpasOut() {
 
 function cvOver() {
   document.getElementById("cv").style.cursor = "pointer";
-  document.getElementById("cv").style.background = "#C1FAE7";
+  document.getElementById("cv").style.background = "#c1f0e1";
   document.getElementById("cv").style.transition = "0.25s ease-in";
-  document.getElementById("cvHeader").style.background = "#6C4DEB";
+  document.getElementById("cvHeader").style.background = "#4d35af";
   document.getElementById("cvHeader").style.color = "#F6F6F2";
   document.getElementById("cvHeader").style.transition = "0.25s ease-in";
 }
